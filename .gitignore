@@ -1,0 +1,5 @@
+node_modules/
+.sites-runtime/
+preview-*.png
+diagnostic-*.png
+*.tar.gz
