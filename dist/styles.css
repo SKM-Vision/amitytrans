@@ -29,9 +29,9 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .skip-link:focus { transform: translateY(0); }
 
 .site-header { position: absolute; top: 28px; left: var(--page-gutter); right: var(--page-gutter); z-index: 5; }
-.navbar { max-width: 1680px; min-height: 88px; margin: auto; display: flex; align-items: center; gap: 24px; padding: 13px 18px 13px 23px; background: var(--white); border-radius: 60px; box-shadow: 0 8px 40px #03152c12; }
+.navbar { max-width: 1680px; min-height: 70px; margin: auto; display: flex; align-items: center; gap: 24px; padding: 8px 18px 8px 23px; background: var(--white); border-radius: 60px; box-shadow: 0 8px 40px #03152c12; }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: 10px; }
-.brand img { width: 57px; height: 57px; display: block; border-radius: 50%; }
+.brand img { width: 46px; height: 46px; display: block; border-radius: 50%; }
 .brand-copy { display: flex; flex-direction: column; gap: 5px; white-space: nowrap; }
 .brand-copy strong { font-size: 21px; font-weight: 800; letter-spacing: -.6px; color: var(--orange-action); }
 .brand-copy > span { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 1.65px; }
@@ -132,7 +132,7 @@ body.has-dialog { overflow: hidden; }
   .nav-link { font-size: 13px; }
   .brand-copy strong { font-size: 18px; }
   .brand-copy > span { font-size: 9px; letter-spacing: 1.2px; }
-  .brand img { width: 48px; height: 48px; }
+  .brand img { width: 44px; height: 44px; }
   .nav-actions { gap: 10px; }
   .contact-button { padding: 0 18px; gap: 10px; }
   .hero-content, .hero-bottom { left: 90px; }
@@ -140,7 +140,7 @@ body.has-dialog { overflow: hidden; }
 }
 @media (max-width: 1000px) {
   .site-header { top: 22px; }
-  .navbar { min-height: 78px; padding: 12px 15px; }
+  .navbar { min-height: 64px; padding: 8px 15px; }
   .nav-actions { margin-left: auto; }
   .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; }
   .menu-toggle span { width: 18px; height: 1.5px; background: var(--ink); transition: transform .2s; }
@@ -161,9 +161,9 @@ body.has-dialog { overflow: hidden; }
 @media (max-width: 700px) {
   :root { --page-gutter: 18px; }
   .site-header { top: 18px; }
-  .navbar { min-height: 70px; gap: 9px; padding: 10px 12px; }
+  .navbar { min-height: 60px; gap: 9px; padding: 8px 12px; }
   .brand { gap: 7px; }
-  .brand img { width: 43px; height: 43px; }
+  .brand img { width: 38px; height: 38px; }
   .brand-copy { gap: 4px; }
   .brand-copy strong { font-size: 16px; letter-spacing: -.4px; }
   .brand-copy > span { font-size: 7px; letter-spacing: 1px; }
@@ -202,7 +202,7 @@ body.has-dialog { overflow: hidden; }
 @media (max-width: 380px) {
   .brand-copy strong { font-size: 14px; }
   .brand-copy > span { letter-spacing: .6px; }
-  .brand img { width: 38px; height: 38px; }
+  .brand img { width: 36px; height: 36px; }
   .contact-button { padding: 0 11px; font-size: 11px; }
   .hero-content { left: 26px; }
   .eyebrow { letter-spacing: 1.2px; }
