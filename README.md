@@ -13,7 +13,7 @@ Then visit http://localhost:4173.
 ## Included
 
 - Floating white pill navigation using the official company logo and catalogue-inspired orange/blue palette.
-- Two hero slides following the supplied reference headings: "Transformers For Power Protection" and "Transformers For Greener Future."
+- Three hero slides in order: "Transformers For Power Generation," "Transformers For Power Protection" and "Transformers For Greener Future."
 - Previous/next controls, slide selection, 8-second autoplay, pause control, swipe and arrow-key navigation.
 - Autoplay pauses on mouse hover, keyboard focus, an open dialog, or a hidden tab. Reduced-motion preferences start the slideshow paused.
 - Responsive mobile navigation, product search and a contact dialog with phone/email links.

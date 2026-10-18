@@ -4,10 +4,15 @@
 - `dist/assets/atipl-catalogue.pdf`: unchanged copy of `../ATIPL Catlauge.pdf`, supplied by the user.
 - `dist/assets/hero-power.webp` and `hero-power-mobile.webp`: illustrative hero artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Not a photograph of an ATIPL site.
 - `dist/assets/hero-green.webp` and `hero-green-mobile.webp`: conceptual sustainability artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. It is a visual concept, not proof of product environmental performance.
+- `dist/assets/hero-generation.webp` and `hero-generation-mobile.webp`: close-up substation transformer artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Used for the first slide; not a photograph of an ATIPL facility or a documented ATIPL product.
 
 The mobile variants are smaller versions of the same artwork; responsive CSS controls composition. Artwork contains no embedded headings, third-party trademarks or approval badges. All typography and controls are HTML/CSS.
 
 ## Final generation prompts
+
+### Power generation (opening slide)
+
+Use case: ads-marketing. Asset type: full-bleed website hero background for an Indian instrument transformer manufacturer. Create an ultra-wide 16:9 cinematic photorealistic photograph inspired by close-up electrical substation transformer equipment: a sharply focused large dark brown ribbed porcelain bushing and robust gray-blue metal instrument transformer housing in the RIGHT half, with more porcelain bushings and instrument transformer units receding into beautiful shallow depth-of-field in an outdoor substation. Cool deep blue/teal industrial color grading, a warm orange sunset rim light and softly glowing amber bokeh between the equipment. Premium engineering advertising photography, believable hardware, elegant strong silhouettes, crisp ceramic texture and realistic metal fasteners. Leave the entire LEFT half relatively uncluttered, darker and softly defocused to support a white and orange HTML heading. Keep main equipment on right but inset enough for mobile cropping. This is illustrative industrial brand artwork, not an actual factory or an identified company product. Image only: absolutely no text, no lettering, no logos, no watermarks, no UI or badges. Do not reproduce the reference site's branding.
 
 ### Power
 
