@@ -74,3 +74,14 @@ Product photographs are original transparent company PNGs, encoded to WebP with 
 | `dist/assets/product-metering-cubicle.webp` | https://amitytrans.com/images/18.png | https://amitytrans.com/meteringindoor.php |
 
 Card exploration links open the category's indoor page, whose navigation also exposes the outdoor range. Explore All Products opens https://amitytrans.com/products.php. Our Products in the demo navbar scrolls to the new local section.
+
+## Custom-transformer banner and figures (22 October 2026)
+
+The reference layout is adapted with the existing navy/orange brand palette, a CSS vertical-line background, two working CTA controls and a four-column capability strip (two columns on mobile). No new images or generated assets are needed.
+
+- Custom CT/PT capabilities: https://amitytrans.com/about.php describes special CTs/PTs on demand. Know More opens that page. Request Custom Design opens the existing phone/email contact dialog; no enquiry is sent automatically.
+- 145 kV maximum oil cooled range and 36 kV maximum dry type range: supplied ATIPL catalogue, pages 2?3, stated as HSV rather than system voltage.
+- 25+ years: experience attributed to the team on the official About page, not the company's manufacturing age.
+- Established 2016: company About page and catalogue cover.
+
+The four figures use ATIPL source data. Facility size, HV test-lab capacity and the competitor's ratings from the supplied layout reference are not asserted for ATIPL.

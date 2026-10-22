@@ -167,7 +167,9 @@
       syncPlayback();
     });
   });
-  document.querySelector('[data-open-contact]').addEventListener('click', () => openDialog(document.querySelector('#contact-dialog')));
+  document.querySelectorAll('[data-open-contact]').forEach(button => {
+    button.addEventListener('click', () => openDialog(document.querySelector('#contact-dialog')));
+  });
 
   const productSearch = document.querySelector('#product-search');
   const resultList = document.querySelector('.search-results');

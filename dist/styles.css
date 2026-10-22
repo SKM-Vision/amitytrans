@@ -149,6 +149,28 @@ h1, .slide h2 { margin: 0; font-weight: 700; letter-spacing: -3px; }
 .product-range-link:hover { color: var(--orange-action); }
 .product-range-link svg { width: 22px; }
 
+.custom-design { padding: 76px var(--page-gutter); background-color: var(--navy); background-image: repeating-linear-gradient(90deg, transparent 0, transparent 75px, #ffffff05 75px, #ffffff05 76px); color: var(--white); }
+.custom-design-inner { display: flex; justify-content: space-between; align-items: center; gap: 40px; max-width: 1680px; margin: auto; }
+.custom-design-copy { min-width: 0; }
+.custom-design h2 { margin: 0; font-size: clamp(28px, 2.7vw, 40px); line-height: 1.2; letter-spacing: -1px; }
+.custom-design-copy > p { margin: 18px 0 0; color: #c8d6e4; font-size: 19px; line-height: 1.6; }
+.custom-design-actions { display: flex; align-items: center; flex-shrink: 0; gap: 18px; }
+.custom-design-button { display: inline-flex; justify-content: center; align-items: center; gap: 18px; min-height: 58px; padding: 14px 27px; border: 1px solid #8fa5ba; border-radius: 9px; font-size: 15px; font-weight: 600; line-height: 1.5; white-space: nowrap; transition: background .2s, border-color .2s; }
+.custom-design-button svg { width: 23px; }
+.custom-design-secondary { color: var(--white); background: transparent; }
+.custom-design-secondary:hover { background: #ffffff12; border-color: var(--white); }
+.custom-design-primary { color: var(--navy); background: var(--white); border-color: var(--white); }
+.custom-design-primary:hover { background: #e8f0f5; border-color: #e8f0f5; }
+.capabilities { padding: 100px var(--page-gutter); background: var(--white); }
+.capability-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0 auto; max-width: 1680px; }
+.capability-item { min-width: 0; padding: 10px 28px; border-left: 1px solid #dce3e9; }
+.capability-item:first-child { padding-left: 0; border-left: 0; }
+.capability-item::before { content: ''; display: block; width: 30px; height: 1px; margin-bottom: 23px; background: var(--orange); }
+.capability-item dt { min-height: 36px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 1px; line-height: 1.5; text-transform: uppercase; }
+.capability-item dd { display: flex; align-items: baseline; gap: 7px; margin: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.capability-value { color: var(--ink); font-size: clamp(48px, 5.1vw, 84px); font-weight: 700; line-height: 1.1; letter-spacing: -3px; }
+.capability-unit { color: var(--orange-action); font-size: clamp(24px, 2.1vw, 34px); font-weight: 500; letter-spacing: -1px; }
+
 .site-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100svh - 40px); border: 0; padding: 48px 35px 34px; border-radius: 22px; color: var(--ink); box-shadow: 0 30px 100px #00122770; }
 .site-dialog::backdrop { background: #03162bd6; backdrop-filter: blur(7px); }
 .dialog-close { position: absolute; top: 14px; right: 14px; }
@@ -173,6 +195,8 @@ body.has-dialog { overflow: hidden; }
   .hero-content { left: max(calc(var(--page-gutter) + 45px), calc((100vw - 1580px) / 2)); }
 }
 @media (max-width: 1180px) {
+  .custom-design-inner { flex-direction: column; align-items: flex-start; gap: 30px; }
+  .capability-item { padding-inline: 20px; }
   .product-visual { height: 252px; padding: 28px 12px; gap: 6px; }
   :root { --page-gutter: 36px; }
   .navbar { gap: 18px; padding-left: 18px; }
@@ -284,6 +308,19 @@ body.has-dialog { overflow: hidden; }
   .product-card-body { padding: 26px; }
   .product-card h3 { font-size: 24px; }
   .product-card-body > p { margin-bottom: 22px; }
+  .custom-design { padding: 50px 24px; }
+  .custom-design h2 { font-size: 30px; letter-spacing: -.7px; }
+  .custom-design-copy > p { margin-top: 16px; font-size: 17px; }
+  .custom-design-actions { flex-direction: column; align-items: stretch; width: 100%; gap: 12px; }
+  .custom-design-button { min-height: 54px; white-space: normal; text-align: center; }
+  .capabilities { padding: 54px 24px 60px; }
+  .capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  .capability-item { padding: 6px 0 6px 20px; }
+  .capability-item:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .capability-item::before { margin-bottom: 18px; }
+  .capability-item dt { min-height: 42px; font-size: 11px; letter-spacing: .6px; }
+  .capability-value { font-size: 48px; letter-spacing: -2px; }
+  .capability-unit { font-size: 23px; }
 }
 @media (max-width: 480px) {
   .about-gallery { grid-template-columns: 1fr; }
