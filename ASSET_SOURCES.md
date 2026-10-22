@@ -32,3 +32,29 @@ Create a premium photorealistic conceptual energy photograph for a transformer m
 
 - ISO markers: widened the white ring and converted CERTIFIED/COMPANY lettering to vector outlines from Arial Bold, keeping all letters clear of the blue centre and independent of browser font/text-path rendering.
 - `dist/assets/msedcl-logo.png`: original, unchanged transparent MSEDCL/Mahavitaran logo downloaded from https://pro.mahadiscom.in/ConsumerContact/images/mahavitaran_logo_transparent.png on the official MSEDCL consumer contact portal. This replaces the catalogue approval-stamp photo in the section.
+
+## About Us section (22 October 2026)
+
+Company copy is adapted from https://amitytrans.com/about.php and the supplied catalogue. The establishment date belongs to the company; the 25+ years of experience is attributed to the team. Captions describe the selected photographs rather than claiming the gallery contains a test lab or coil-winding area.
+
+The three photographs were downloaded from the official company gallery at https://www.amitytrans.com/gallery.php and enhanced separately with the built-in ChatGPT ImageGen tool. They are AI-retouched versions of company photographs, with improved lighting, white balance and clarity; they are not untouched documentary originals. Original downloaded JPEGs are retained in `source-images/`.
+
+| Final website asset | Original company photo | Retained original |
+| --- | --- | --- |
+| `dist/assets/about-outdoor.webp` | https://www.amitytrans.com/gallery%20photo/16.jpeg | `source-images/about-outdoor-original.jpeg` |
+| `dist/assets/about-resin.webp` | https://www.amitytrans.com/gallery%20photo/5.jpeg | `source-images/about-resin-original.jpeg` |
+| `dist/assets/about-facility.webp` | https://www.amitytrans.com/gallery%20photo/12.jpeg | `source-images/about-facility-original.jpeg` |
+
+The enhanced outputs are encoded as local WebP assets for the website. HTML reserves image space and loads the photographs lazily.
+
+### Final prompt: outdoor instrument transformer
+
+Use case: lighting-weather. Asset type: portrait photograph for the About Us section of the actual Amitytrans Techno instrument transformer company. Input image 1 is the edit target, an existing real company gallery photograph. Enhance this same photograph with natural professional industrial editorial photo retouching: improve underexposed detail, balanced neutral white balance, cleaner tonal contrast, gentle clarity and sharpness, reduce JPEG noise, keep the brown porcelain and blue-grey painted metal accurate. Preserve the exact same transformer identity, shape, number of porcelain ribs, mechanical connections, terminals, nameplate, timber base and the actual warehouse background. Maintain the full portrait composition with the entire transformer visible and headroom around its top and base. Keep a believable naturally lit factory photograph. Do not invent or alter technical markings, do not add equipment, do not turn the warehouse into a different building, no new logos or lettering, no render or illustration, no heavy cinematic grade. Output one enhanced portrait photograph only.
+
+### Final prompt: resin cast transformer lineup
+
+Use case: lighting-weather. Asset type: landscape photograph for the About Us section of actual manufacturer Amitytrans Techno. Input image 1 is the edit target: the real factory gallery photograph of rows of reddish brown resin cast instrument transformers. Enhance this same photograph with professional natural industrial editorial retouching. Improve exposure uniformity and neutral white balance, recover highlight detail, increase modest sharpness and reduce compression artifacts. Preserve the same product geometry, actual rows and product count, brass terminals, nameplates and the same real factory floor and background. Keep the reddish brown resin realistic. Maintain this wide diagonal view of the product lineup, suitable for a landscape website image. No added equipment, no changes to specifications or labels, no fabricated facility or certification marks, no added text or logos, no illustration. Output one enhanced landscape photograph only.
+
+### Final prompt: manufacturing facility
+
+Use case: lighting-weather. Asset type: landscape company-facility photograph for Amitytrans Techno About Us website section. Input image 1 is the edit target: the real gallery photograph of rows of pale grey electrical cabinets on the factory floor. Enhance the same real photograph with natural professional industrial photo retouching: correct the slight camera tilt, improve exposure and balance bright highlights with interior shadows, neutral white balance, gently improve sharpness and detail and reduce JPEG noise. Preserve the exact same real building, roof structure, arrangement and number of cabinets, vents, doors, labels and all real equipment. Preserve the pallet truck and foreground materials rather than inventing a different facility. Keep a realistic clean photographic look, not a glossy CGI render. Landscape composition suitable for an image card. Do not invent technical labels, new machinery, people, logos or textual overlays. Output one enhanced landscape photograph only.

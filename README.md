@@ -19,9 +19,10 @@ Then visit http://localhost:4173.
 - Responsive mobile navigation, product search and a contact dialog with phone/email links.
 - Local, optimized WebP hero assets and the supplied catalogue PDF.
 - White certifications section with ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 and the original MSEDCL/Mahavitaran logo; four columns on desktop and two on mobile. ISO ring lettering uses vector outlines for reliable rendering.
+- About Us section with source-based company copy, three AI-enhanced official gallery photos, a Know More link, and responsive photo cards matching the supplied reference.
 - No pause button or hero team-contact block.
 - Reduced-motion preferences disable autoplay and minimize transition effects.
 
-The navbar, hero and certifications section are implemented. About, products and gallery open the existing official website in a new tab; catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
+The navbar, hero, certifications and About Us sections are implemented. About Us in the navbar scrolls to the local section; Know More, products and gallery open the existing official website in a new tab. Catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
 
 All site assets are in `dist/assets`. See `ASSET_SOURCES.md` for image provenance and generation prompts. Review `../AMITY_TRANSCO_WEBSITE_REFERENCE.md` for the source facts and unresolved company details.
