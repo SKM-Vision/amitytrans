@@ -12,13 +12,16 @@ Then visit http://localhost:4173.
 
 ## Included
 
-- Floating white pill navigation using the official company logo and catalogue-inspired orange/blue palette.
+- Floating white pill navigation using the official company logo and catalogue-inspired orange/blue palette, smoothly expanding into a fixed full-width header after scrolling.
 - Three hero slides in order: "Transformers For Power Generation," "Transformers For Power Protection" and "Transformers For Greener Future."
-- Previous/next controls, slide selection, 8-second autoplay, pause control, swipe and arrow-key navigation.
+- Previous/next controls, slide selection, 2-second autoplay, swipe and arrow-key navigation.
 - Autoplay pauses on mouse hover, keyboard focus, an open dialog, or a hidden tab. Reduced-motion preferences start the slideshow paused.
 - Responsive mobile navigation, product search and a contact dialog with phone/email links.
 - Local, optimized WebP hero assets and the supplied catalogue PDF.
+- White certifications section with ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 and the catalogue-supplied MSEDCL approval badge; four columns on desktop and two on mobile.
+- No pause button or hero team-contact block.
+- Reduced-motion preferences disable autoplay and minimize transition effects.
 
-Only the navbar and hero are implemented. About, products and gallery open the existing official website in a new tab; catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
+The navbar, hero and certifications section are implemented. About, products and gallery open the existing official website in a new tab; catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
 
 All site assets are in `dist/assets`. See `ASSET_SOURCES.md` for image provenance and generation prompts. Review `../AMITY_TRANSCO_WEBSITE_REFERENCE.md` for the source facts and unresolved company details.

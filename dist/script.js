@@ -4,22 +4,19 @@
   const hero = document.querySelector('.hero');
   const slides = [...document.querySelectorAll('.slide')];
   const selectors = [...document.querySelectorAll('.slide-selector')];
-  const autoplayButton = document.querySelector('.autoplay-toggle');
   const announcement = document.querySelector('.slide-announcement');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const interval = 8000;
+  const interval = 2000;
   let currentSlide = 0;
   let timer;
   let remaining = interval;
   let startedAt = 0;
-  let userPaused = reducedMotion.matches;
   let pointerOver = false;
   let focusInside = false;
   let dialogOpen = false;
-  let explicitPlay = false;
 
   function isPaused() {
-    return userPaused || (!explicitPlay && (pointerOver || focusInside)) || dialogOpen || document.hidden;
+    return reducedMotion.matches || pointerOver || focusInside || dialogOpen || document.hidden;
   }
 
   function syncPlayback() {
@@ -30,8 +27,6 @@
     }
     const paused = isPaused();
     hero.classList.toggle('is-paused', paused);
-    autoplayButton.classList.toggle('is-paused', userPaused);
-    autoplayButton.setAttribute('aria-label', userPaused ? 'Play slideshow' : 'Pause slideshow');
     if (!paused) {
       startedAt = performance.now();
       timer = setTimeout(() => showSlide(currentSlide + 1), remaining);
@@ -66,14 +61,8 @@
   document.querySelector('.slide-previous').addEventListener('click', () => showSlide(currentSlide - 1, true));
   document.querySelector('.slide-next').addEventListener('click', () => showSlide(currentSlide + 1, true));
   selectors.forEach(button => button.addEventListener('click', () => showSlide(Number(button.dataset.slide), true)));
-  autoplayButton.addEventListener('click', () => {
-    userPaused = !userPaused;
-    explicitPlay = !userPaused;
-    syncPlayback();
-  });
   hero.addEventListener('pointerenter', event => {
     if (event.pointerType !== 'mouse') return;
-    explicitPlay = false;
     pointerOver = true;
     syncPlayback();
   });
@@ -82,7 +71,6 @@
     syncPlayback();
   });
   hero.addEventListener('focusin', () => {
-    explicitPlay = false;
     focusInside = true;
     syncPlayback();
   });
@@ -93,10 +81,7 @@
     }
   });
   document.addEventListener('visibilitychange', syncPlayback);
-  reducedMotion.addEventListener('change', event => {
-    if (event.matches) userPaused = true;
-    syncPlayback();
-  });
+  reducedMotion.addEventListener('change', syncPlayback);
   hero.addEventListener('keydown', event => {
     if (event.target.closest('a, button, input')) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -117,6 +102,23 @@
     touchStart = undefined;
   }, { passive: true });
   hero.addEventListener('touchcancel', () => { touchStart = undefined; });
+
+  const header = document.querySelector('.site-header');
+  let headerScrolled = false;
+  let scrollQueued = false;
+  function updateHeader() {
+    // Separate enter/exit thresholds prevent flickering near the transition.
+    headerScrolled = window.scrollY > (headerScrolled ? 40 : 96);
+    header.classList.toggle('is-scrolled', headerScrolled);
+    scrollQueued = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (scrollQueued) return;
+    scrollQueued = true;
+    requestAnimationFrame(updateHeader);
+  }, { passive: true });
+  window.addEventListener('pageshow', updateHeader);
+  updateHeader();
 
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.nav-links');

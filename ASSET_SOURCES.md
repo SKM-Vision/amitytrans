@@ -21,3 +21,9 @@ Create a cinematic photorealistic background photograph for an electrical transf
 ### Greener future
 
 Create a premium photorealistic conceptual energy photograph for a transformer manufacturer's website hero, ultra-wide 16:9 landscape. A realistic clear glass incandescent lightbulb standing upright in rich soil on the right half of frame, inside the bulb a small healthy bright green seedling with two to four leaves. Beautiful soft sunlight grazing the glass, distant forest/garden with subtle green bokeh, deep dark teal/navy shadows, restrained warm amber highlights. Strong cinematic atmosphere and realistic glass refraction, sharp focus on bulb and plant, gorgeous organic soil texture. Leave the entire left half darker and relatively empty for large white heading overlay. Refined sustainability advertising photograph. Absolutely no text, no logos, no watermarks, no UI, no extra objects, no badges.
+
+## Certifications section (22 October 2026)
+
+- `dist/assets/iso-9001.svg`, `iso-14001.svg` and `iso-45001.svg`: locally authored matching blue ISO standard markers, following the supplied layout reference. These are generic visual markers, not seals of an identified accreditation or certification body. Standard labels follow the company website and the user's supplied reference.
+- `dist/assets/msedcl-approved.png`: extracted losslessly from the JPEG image strips embedded on page 1 of the user-supplied ATIPL catalogue, preserving the supplied badge artwork.
+- The company website's three certificate PDF URLs returned HTTP 404 on 22 October 2026. The section presents the requested badges without broken certificate-download links.
