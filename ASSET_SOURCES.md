@@ -85,3 +85,9 @@ The reference layout is adapted with the existing navy/orange brand palette, a C
 - Established 2016: company About page and catalogue cover.
 
 The four figures use ATIPL source data. Facility size, HV test-lab capacity and the competitor's ratings from the supplied layout reference are not asserted for ATIPL.
+
+## Industries & Applications (22 October 2026)
+
+The section appears after the capability figures and covers power utilities/electricity boards, switchgear manufacturers and industrial customers. Customer categories follow the official company About page (https://amitytrans.com/about.php), which identifies utilities, electricity boards, private customers and switchgear manufacturers. Application notes describe general uses of the documented CT/PT and metering products rather than named customer projects or sector-specific approvals.
+
+Three line icons are authored as SVG symbols in `dist/index.html`, using the site's existing stroke-icon style. No external imagery or AI-generated assets are used. Relevant-product links target the existing local CT, PT and metering-cubicle cards. Discuss Your Application opens the existing contact dialog without sending any message.

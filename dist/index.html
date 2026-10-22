@@ -20,6 +20,9 @@
     <symbol id="phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3c1.2 2.4 2.6 3.8 5 5l3-3 5 3c0 3-2 5-5 5C9 21 3 15 3 8c0-3 2-5 5-5Z"/></symbol>
     <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
     <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="industry-grid" viewBox="0 0 48 48"><path d="M20 6h8M23 6l-9 36M25 6l9 36M12 16h24M8 26h32M18 16l14 10M30 16 16 26M17 35h14M12 16v5M36 16v5M8 26v5M40 26v5M10 42h28"/></symbol>
+    <symbol id="industry-switchgear" viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="35" rx="3"/><path d="M18 7v35M30 7v35M10 14h4M22 14h4M34 14h4M14 25v6M26 25v6M38 25v6M10 36h4M22 36h4M34 36h4M10 42v3M38 42v3"/></symbol>
+    <symbol id="industry-factory" viewBox="0 0 48 48"><path d="M5 42V23l12 6V19l13 7V8h8v34ZM30 15h8M10 34h3M20 34h3M30 34h3M10 42v-4h5v4M35 3h4"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -243,6 +246,70 @@
           <dd><span class="capability-value">2016</span></dd>
         </div>
       </dl>
+    </section>
+    <section class="industries-section" id="industries" aria-labelledby="industries-title">
+      <div class="industries-inner">
+        <div class="industries-heading">
+          <div class="industries-intro">
+            <p class="section-eyebrow"><span aria-hidden="true"></span>Where We Add Value</p>
+            <h2 id="industries-title">Industries &amp; Applications</h2>
+            <p>Supporting utilities, switchgear manufacturers and industrial customers with instrument transformers for electrical measurement, metering and protection.</p>
+          </div>
+          <button class="primary-button industries-contact" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Discuss Your Application<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+        </div>
+        <div class="industries-grid">
+          <article class="industry-card" aria-labelledby="industry-utilities-title">
+            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-grid"/></svg></span><span class="industry-number" aria-hidden="true">01</span></div>
+            <h3 id="industry-utilities-title">Power Utilities &amp; Electricity Boards</h3>
+            <p>Current and voltage transformers for metering and protection in electrical power distribution networks.</p>
+            <ul class="industry-applications" aria-label="Utility applications">
+              <li>Distribution metering</li>
+              <li>Protection circuits</li>
+            </ul>
+            <div class="industry-products">
+              <p>Relevant products</p>
+              <ul aria-label="Products for power utilities">
+                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
+                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
+                <li><a href="#metering-title">Metering Cubicles<svg aria-hidden="true"><use href="#arrow"/></svg></a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="industry-card" aria-labelledby="industry-switchgear-title">
+            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-switchgear"/></svg></span><span class="industry-number" aria-hidden="true">02</span></div>
+            <h3 id="industry-switchgear-title">Switchgear Manufacturers</h3>
+            <p>Instrument transformers for measurement and protection circuits in indoor and outdoor switchgear assemblies.</p>
+            <ul class="industry-applications" aria-label="Switchgear applications">
+              <li>Current and voltage measurement</li>
+              <li>Panel integration</li>
+            </ul>
+            <div class="industry-products">
+              <p>Relevant products</p>
+              <ul aria-label="Products for switchgear manufacturers">
+                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
+                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
+              </ul>
+            </div>
+          </article>
+          <article class="industry-card" aria-labelledby="industry-industrial-title">
+            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-factory"/></svg></span><span class="industry-number" aria-hidden="true">03</span></div>
+            <h3 id="industry-industrial-title">Industrial Customers</h3>
+            <p>CTs, PTs and metering cubicles for electrical measurement and energy metering in industrial power systems.</p>
+            <ul class="industry-applications" aria-label="Industrial applications">
+              <li>Incoming supply metering</li>
+              <li>Load measurement</li>
+            </ul>
+            <div class="industry-products">
+              <p>Relevant products</p>
+              <ul aria-label="Products for industrial customers">
+                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
+                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
+                <li><a href="#metering-title">Metering Cubicles<svg aria-hidden="true"><use href="#arrow"/></svg></a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
