@@ -14,8 +14,8 @@ Then visit http://localhost:4173.
 
 - Floating white pill navigation using the official company logo and catalogue-inspired orange/blue palette, smoothly expanding into a fixed full-width header after scrolling.
 - Three hero slides in order: "Transformers For Power Generation," "Transformers For Power Protection" and "Transformers For Greener Future."
-- Previous/next controls, slide selection, 2-second autoplay, swipe and arrow-key navigation.
-- Autoplay pauses on mouse hover, keyboard focus, an open dialog, or a hidden tab. Reduced-motion preferences start the slideshow paused.
+- Previous/next controls, slide selection, 2.5-second autoplay, swipe and arrow-key navigation.
+- Autoplay continues on mouse hover and clicks. It pauses for visible keyboard focus, an open dialog, or a hidden tab. Reduced-motion preferences start the slideshow paused.
 - Responsive mobile navigation, product search and a contact dialog with phone/email links.
 - Local, optimized WebP hero assets and the supplied catalogue PDF.
 - White certifications section with ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 and the catalogue-supplied MSEDCL approval badge; four columns on desktop and two on mobile.

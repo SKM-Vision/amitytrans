@@ -8,7 +8,7 @@
   --muted: #52606d;
   --white: #fff;
   --page-gutter: clamp(24px, 6.5vw, 124px);
-  --slide-duration: 2000ms;
+  --slide-duration: 2500ms;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--ink);
   background: var(--navy);

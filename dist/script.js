@@ -6,17 +6,16 @@
   const selectors = [...document.querySelectorAll('.slide-selector')];
   const announcement = document.querySelector('.slide-announcement');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const interval = 2000;
+  const interval = 2500;
   let currentSlide = 0;
   let timer;
   let remaining = interval;
   let startedAt = 0;
-  let pointerOver = false;
   let focusInside = false;
   let dialogOpen = false;
 
   function isPaused() {
-    return reducedMotion.matches || pointerOver || focusInside || dialogOpen || document.hidden;
+    return reducedMotion.matches || focusInside || dialogOpen || document.hidden;
   }
 
   function syncPlayback() {
@@ -61,17 +60,13 @@
   document.querySelector('.slide-previous').addEventListener('click', () => showSlide(currentSlide - 1, true));
   document.querySelector('.slide-next').addEventListener('click', () => showSlide(currentSlide + 1, true));
   selectors.forEach(button => button.addEventListener('click', () => showSlide(Number(button.dataset.slide), true)));
-  hero.addEventListener('pointerenter', event => {
-    if (event.pointerType !== 'mouse') return;
-    pointerOver = true;
+  hero.addEventListener('pointerdown', () => {
+    focusInside = false;
     syncPlayback();
   });
-  hero.addEventListener('pointerleave', () => {
-    pointerOver = false;
-    syncPlayback();
-  });
-  hero.addEventListener('focusin', () => {
-    focusInside = true;
+  hero.addEventListener('focusin', event => {
+    // Pause for keyboard navigation while letting mouse interaction keep playing.
+    focusInside = event.target.matches(':focus-visible');
     syncPlayback();
   });
   hero.addEventListener('focusout', event => {
