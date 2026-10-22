@@ -32,7 +32,7 @@ svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width:
 .site-header { --header-offset: 28px; position: fixed; top: 0; left: 0; right: 0; z-index: 5; padding: var(--header-offset) var(--page-gutter) 0; transition: padding .35s cubic-bezier(.22, 1, .36, 1); }
 .navbar { position: relative; max-width: 1680px; min-height: 70px; margin: auto; display: flex; align-items: center; gap: 24px; padding: 8px 18px 8px 23px; background: var(--white); border-radius: 60px; box-shadow: 0 8px 40px #03152c12; transition: border-radius .35s, min-height .35s, padding .35s, box-shadow .35s; }
 .site-header.is-scrolled { padding: 0; }
-.site-header.is-scrolled .navbar { max-width: none; min-height: 88px; padding: 12px max(var(--page-gutter), calc((100vw - 1640px) / 2)); border-radius: 0; box-shadow: 0 5px 28px #03152c18; }
+.site-header.is-scrolled .navbar { max-width: none; min-height: 72px; padding: 8px max(var(--page-gutter), calc((100vw - 1640px) / 2)); border-radius: 0; box-shadow: 0 5px 28px #03152c18; }
 .site-header.is-scrolled .contact-button { border-radius: 9px; }
 .brand { display: inline-flex; align-items: center; flex-shrink: 0; gap: 10px; }
 .brand img { width: 46px; height: 46px; display: block; border-radius: 50%; }
@@ -105,7 +105,7 @@ h1, .slide h2 { margin: 0; font-weight: 700; letter-spacing: -3px; }
 .certification-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin: 86px 0 0; padding: 0; list-style: none; }
 .certification { display: flex; align-items: center; flex-direction: column; }
 .certification img { display: block; width: 108px; height: 108px; object-fit: contain; }
-.certification .msedcl-badge { width: 120px; height: 108px; }
+.certification .msedcl-logo { width: min(180px, 100%); height: 108px; }
 .certification h3 { margin: 22px 0 0; font-size: 17px; line-height: 1.5; font-weight: 600; }
 
 .site-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100svh - 40px); border: 0; padding: 48px 35px 34px; border-radius: 22px; color: var(--ink); box-shadow: 0 30px 100px #00122770; }
@@ -146,7 +146,7 @@ body.has-dialog { overflow: hidden; }
 }
 @media (max-width: 1000px) {
   .site-header { --header-offset: 22px; }
-  .site-header.is-scrolled .navbar { min-height: 78px; }
+  .site-header.is-scrolled .navbar { min-height: 70px; }
   .navbar { min-height: 64px; padding: 8px 15px; }
   .nav-actions { margin-left: auto; }
   .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; }
@@ -167,7 +167,7 @@ body.has-dialog { overflow: hidden; }
 @media (max-width: 700px) {
   :root { --page-gutter: 18px; }
   .site-header { --header-offset: 18px; }
-  .site-header.is-scrolled .navbar { min-height: 72px; padding: 10px var(--page-gutter); }
+  .site-header.is-scrolled .navbar { min-height: 64px; padding: 8px var(--page-gutter); }
   .navbar { min-height: 60px; gap: 9px; padding: 8px 12px; }
   .brand { gap: 7px; }
   .brand img { width: 38px; height: 38px; }
@@ -207,7 +207,7 @@ body.has-dialog { overflow: hidden; }
   .certifications h2 { letter-spacing: -1px; }
   .certification-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 16px; margin-top: 44px; }
   .certification img { width: 94px; height: 94px; }
-  .certification .msedcl-badge { width: 106px; height: 94px; }
+  .certification .msedcl-logo { width: min(142px, 100%); height: 94px; }
   .certification h3 { font-size: 14px; margin-top: 16px; }
 }
 @media (max-width: 380px) {

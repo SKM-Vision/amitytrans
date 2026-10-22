@@ -18,7 +18,7 @@ Then visit http://localhost:4173.
 - Autoplay continues on mouse hover and clicks. It pauses for visible keyboard focus, an open dialog, or a hidden tab. Reduced-motion preferences start the slideshow paused.
 - Responsive mobile navigation, product search and a contact dialog with phone/email links.
 - Local, optimized WebP hero assets and the supplied catalogue PDF.
-- White certifications section with ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 and the catalogue-supplied MSEDCL approval badge; four columns on desktop and two on mobile.
+- White certifications section with ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 and the original MSEDCL/Mahavitaran logo; four columns on desktop and two on mobile. ISO ring lettering uses vector outlines for reliable rendering.
 - No pause button or hero team-contact block.
 - Reduced-motion preferences disable autoplay and minimize transition effects.
 

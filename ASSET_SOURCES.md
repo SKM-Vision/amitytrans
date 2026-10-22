@@ -27,3 +27,8 @@ Create a premium photorealistic conceptual energy photograph for a transformer m
 - `dist/assets/iso-9001.svg`, `iso-14001.svg` and `iso-45001.svg`: locally authored matching blue ISO standard markers, following the supplied layout reference. These are generic visual markers, not seals of an identified accreditation or certification body. Standard labels follow the company website and the user's supplied reference.
 - `dist/assets/msedcl-approved.png`: extracted losslessly from the JPEG image strips embedded on page 1 of the user-supplied ATIPL catalogue, preserving the supplied badge artwork.
 - The company website's three certificate PDF URLs returned HTTP 404 on 22 October 2026. The section presents the requested badges without broken certificate-download links.
+
+## Certification refinements (22 October 2026)
+
+- ISO markers: widened the white ring and converted CERTIFIED/COMPANY lettering to vector outlines from Arial Bold, keeping all letters clear of the blue centre and independent of browser font/text-path rendering.
+- `dist/assets/msedcl-logo.png`: original, unchanged transparent MSEDCL/Mahavitaran logo downloaded from https://pro.mahadiscom.in/ConsumerContact/images/mahavitaran_logo_transparent.png on the official MSEDCL consumer contact portal. This replaces the catalogue approval-stamp photo in the section.
