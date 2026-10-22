@@ -198,6 +198,28 @@ h1, .slide h2 { margin: 0; font-weight: 700; letter-spacing: -3px; }
 .industry-products a svg { width: 15px; height: 15px; }
 .industry-products a:hover { color: var(--orange-action); border-color: #efc6b9; background: #fff7f3; }
 
+.quality-section { position: relative; isolation: isolate; overflow: hidden; padding: 100px var(--page-gutter); background: var(--navy); color: var(--white); }
+.quality-background, .quality-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.quality-background { object-fit: cover; object-position: center 60%; }
+.quality-shade { background: linear-gradient(90deg, #041b30f5 0%, #06223ce8 45%, #092b42ba 100%); }
+.quality-inner { position: relative; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 48px; max-width: 1680px; margin: auto; }
+.quality-copy { max-width: 650px; }
+.quality-copy .section-eyebrow { justify-content: flex-start; color: #d9e5ee; margin-bottom: 26px; }
+.quality-copy h2 { margin: 0; font-size: clamp(36px, 3.4vw, 52px); line-height: 1.16; letter-spacing: -1.4px; }
+.quality-description { margin: 30px 0 0; color: #e1e9f0; font-size: 18px; line-height: 1.8; }
+.quality-button { gap: 18px; margin-top: 34px; color: var(--white); }
+.quality-visual { position: relative; width: 100%; max-width: 640px; min-width: 0; height: 600px; margin-inline: auto; }
+.quality-circle { position: absolute; top: 50%; left: 50%; width: min(72%, 400px); aspect-ratio: 1; transform: translate(-50%, -50%); overflow: hidden; border: 1px solid #ffffff33; border-radius: 50%; box-shadow: 0 22px 70px #00101b55; }
+.quality-circle img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.quality-principle { position: absolute; display: flex; align-items: center; justify-content: center; flex-direction: column; width: 168px; min-height: 164px; padding: 20px 14px; border: 1px solid #ffffff26; border-radius: 18px; background: #24475bdb; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); text-align: center; }
+.quality-principle > svg { width: 30px; height: 30px; }
+.quality-principle h3 { margin: 10px 0 8px; font-size: 25px; font-weight: 700; line-height: 1.1; letter-spacing: -.5px; }
+.quality-principle p { margin: 0; max-width: 140px; color: #e1e9f0; font-size: 14px; line-height: 1.45; }
+.quality-principle-consistency { top: 0; left: 50%; transform: translateX(-50%); }
+.quality-principle-customer { top: 35%; left: 0; }
+.quality-principle-standards { top: 49%; right: 0; }
+.quality-principle-improvement { bottom: 0; left: 50%; transform: translateX(-50%); }
+
 .site-dialog { width: min(520px, calc(100% - 32px)); max-height: calc(100svh - 40px); border: 0; padding: 48px 35px 34px; border-radius: 22px; color: var(--ink); box-shadow: 0 30px 100px #00122770; }
 .site-dialog::backdrop { background: #03162bd6; backdrop-filter: blur(7px); }
 .dialog-close { position: absolute; top: 14px; right: 14px; }
@@ -222,6 +244,8 @@ body.has-dialog { overflow: hidden; }
   .hero-content { left: max(calc(var(--page-gutter) + 45px), calc((100vw - 1580px) / 2)); }
 }
 @media (max-width: 1180px) {
+  .quality-inner { grid-template-columns: 1fr; }
+  .quality-copy { max-width: 760px; }
   .custom-design-inner { flex-direction: column; align-items: flex-start; gap: 30px; }
   .capability-item { padding-inline: 20px; }
   .product-visual { height: 252px; padding: 28px 12px; gap: 6px; }
@@ -361,6 +385,17 @@ body.has-dialog { overflow: hidden; }
   .industry-card { padding: 26px; }
   .industry-card-top { margin-bottom: 24px; }
   .industry-card h3 { font-size: 24px; }
+  .quality-section { padding: 54px 24px 64px; }
+  .quality-inner { gap: 40px; }
+  .quality-copy h2 { font-size: 36px; letter-spacing: -1px; }
+  .quality-description { margin-top: 24px; font-size: 16px; }
+  .quality-button { margin-top: 28px; }
+  .quality-shade { background: #041b30eb; }
+  .quality-visual { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; height: auto; }
+  .quality-circle { position: relative; grid-column: 1 / -1; top: auto; left: auto; width: min(100%, 320px); margin: 0 auto 14px; transform: none; }
+  .quality-principle { position: static; width: auto; min-height: 156px; padding: 20px 12px; transform: none; }
+  .quality-principle h3 { font-size: 22px; }
+  .quality-principle p { font-size: 13px; }
 }
 @media (max-width: 480px) {
   .about-gallery { grid-template-columns: 1fr; }

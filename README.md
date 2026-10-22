@@ -23,9 +23,10 @@ Then visit http://localhost:4173.
 - Product Range section with CT, PT and metering cubicle cards, original transparent company product photos, category links and an Explore All Products button.
 - Custom-transformer CTA banner with Know More and Request Custom Design actions, followed by four source-based capability figures. The request button opens the same contact dialog as the navbar.
 - Industries & Applications section with three customer/application cards, vector icons, links to matching products and a contact-dialog CTA.
+- Quality & Commitment section with a real company workshop photo, dark navy background, circular image, four quality-principle cards and a link to the published quality policy.
 - No pause button or hero team-contact block.
 - Reduced-motion preferences disable autoplay and minimize transition effects.
 
-The navbar, hero, certifications, About Us, Product Range, custom-design CTA, capability figures and Industries & Applications are implemented. About Us and Our Products in the navbar scroll to their local sections. Know More, the product-card exploration links, Explore All Products and Gallery open the existing official website in a new tab. Catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
+The navbar, hero, certifications, About Us, Product Range, custom-design CTA, capability figures, Industries & Applications and Quality & Commitment are implemented. About Us and Our Products in the navbar scroll to their local sections. Know More, the product-card exploration links, Explore All Products and Gallery open the existing official website in a new tab. Catalogue links open the supplied PDF. Contact channels are provisional details recorded in the research brief. No enquiry form/backend is included.
 
 All site assets are in `dist/assets`. See `ASSET_SOURCES.md` for image provenance and generation prompts. Review `../AMITY_TRANSCO_WEBSITE_REFERENCE.md` for the source facts and unresolved company details.

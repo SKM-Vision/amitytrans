@@ -91,3 +91,11 @@ The four figures use ATIPL source data. Facility size, HV test-lab capacity and 
 The section appears after the capability figures and covers power utilities/electricity boards, switchgear manufacturers and industrial customers. Customer categories follow the official company About page (https://amitytrans.com/about.php), which identifies utilities, electricity boards, private customers and switchgear manufacturers. Application notes describe general uses of the documented CT/PT and metering products rather than named customer projects or sector-specific approvals.
 
 Three line icons are authored as SVG symbols in `dist/index.html`, using the site's existing stroke-icon style. No external imagery or AI-generated assets are used. Relevant-product links target the existing local CT, PT and metering-cubicle cards. Discuss Your Application opens the existing contact dialog without sending any message.
+
+## Quality & Commitment (22 October 2026)
+
+- `dist/assets/quality-workshop.webp`: original company photograph from https://www.amitytrans.com/gallery%20photo/2.jpeg, also listed on https://www.amitytrans.com/gallery.php. It shows staff working on instrument transformers in the actual company workshop. Downloaded original retained as `source-images/quality-workshop-original.jpeg`. The photograph is encoded to WebP without AI alteration. CSS supplies the dark background overlay and circular inset crop; both use the same asset.
+- Copy and the Quality, Customer and Improve principle cards follow the quality policy and objectives on https://amitytrans.com/about.php: consistent product quality, customer requirements and continual improvement.
+- The IS / IEC card refers to the standards listed in the supplied product catalogue. It does not assert a specific test-lab capacity, universal product certification or independently verified compliance percentage.
+- Four white line icons are authored as SVG symbols in the existing icon library. The layout adapts the user-supplied sustainability reference to ATIPL's industrial context, navy/orange brand and documented quality commitments.
+- View Our Quality Policy opens the company's About page, which contains its Quality Policy and Quality Objective sections.
