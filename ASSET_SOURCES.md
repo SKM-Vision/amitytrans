@@ -58,3 +58,19 @@ Use case: lighting-weather. Asset type: landscape photograph for the About Us se
 ### Final prompt: manufacturing facility
 
 Use case: lighting-weather. Asset type: landscape company-facility photograph for Amitytrans Techno About Us website section. Input image 1 is the edit target: the real gallery photograph of rows of pale grey electrical cabinets on the factory floor. Enhance the same real photograph with natural professional industrial photo retouching: correct the slight camera tilt, improve exposure and balance bright highlights with interior shadows, neutral white balance, gently improve sharpness and detail and reduce JPEG noise. Preserve the exact same real building, roof structure, arrangement and number of cabinets, vents, doors, labels and all real equipment. Preserve the pallet truck and foreground materials rather than inventing a different facility. Keep a realistic clean photographic look, not a glossy CGI render. Landscape composition suitable for an image card. Do not invent technical labels, new machinery, people, logos or textual overlays. Output one enhanced landscape photograph only.
+
+## Product Range section (22 October 2026)
+
+The section presents CTs, PTs and metering cubicles, following the user-supplied three-card layout. Copy follows the official product categories and the supplied ATIPL catalogue, retaining the distinction between transformer HSV and metering-cubicle system voltage. It does not copy competitor voltage ranges or type-test claims.
+
+Product photographs are original transparent company PNGs, encoded to WebP with transparency preserved. They have not been AI-redrawn. Indoor/outdoor image assignments were checked against the corresponding official category pages, all retrieved successfully on 22 October 2026.
+
+| Website asset | Original photo | Category source / card destination |
+| --- | --- | --- |
+| `dist/assets/product-ct-indoor.webp` | https://amitytrans.com/images/3.png | https://amitytrans.com/ctindoor.php |
+| `dist/assets/product-ct-outdoor.webp` | https://amitytrans.com/images/9.png | https://amitytrans.com/ctoutdoor.php |
+| `dist/assets/product-pt-indoor.webp` | https://amitytrans.com/images/4.png | https://amitytrans.com/ptindoor.php |
+| `dist/assets/product-pt-outdoor.webp` | https://amitytrans.com/images/10.png | https://amitytrans.com/ptoutdoor.php |
+| `dist/assets/product-metering-cubicle.webp` | https://amitytrans.com/images/18.png | https://amitytrans.com/meteringindoor.php |
+
+Card exploration links open the category's indoor page, whose navigation also exposes the outdoor range. Explore All Products opens https://amitytrans.com/products.php. Our Products in the demo navbar scrolls to the new local section.
