@@ -99,3 +99,71 @@ Three line icons are authored as SVG symbols in `dist/index.html`, using the sit
 - The IS / IEC card refers to the standards listed in the supplied product catalogue. It does not assert a specific test-lab capacity, universal product certification or independently verified compliance percentage.
 - Four white line icons are authored as SVG symbols in the existing icon library. The layout adapts the user-supplied sustainability reference to ATIPL's industrial context, navy/orange brand and documented quality commitments.
 - View Our Quality Policy opens the company's About page, which contains its Quality Policy and Quality Objective sections.
+
+## Our Clients (22 October 2026)
+
+Fourteen logo files are downloaded from the company's official client gallery at https://amitytrans.com/clients.php and encoded as WebP under `dist/assets/clients/`, preserving the original company-supplied artwork and backgrounds. The source page was retrieved successfully on 22 October 2026. These are company-listed client references; the section does not assert current contracts, project totals or independent endorsements. No logos are AI-generated or redrawn.
+
+| Website asset | Official company source |
+| --- | --- |
+| `dist/assets/clients/bhel.webp` | https://amitytrans.com/logos/BHEL.JPG |
+| `dist/assets/clients/nhpc.webp` | https://amitytrans.com/logos/NHPC.JPG |
+| `dist/assets/clients/nalco.webp` | https://amitytrans.com/logos/NALCO.JPG |
+| `dist/assets/clients/bses.webp` | https://amitytrans.com/logos/BSES.JPG |
+| `dist/assets/clients/kseb.webp` | https://amitytrans.com/logos/KSEB.JPG |
+| `dist/assets/clients/wesco.webp` | https://amitytrans.com/logos/WESCO.JPG |
+| `dist/assets/clients/ncl.webp` | https://amitytrans.com/logos/NCL.JPG |
+| `dist/assets/clients/apdcl.webp` | https://amitytrans.com/logos/AASAM%20POWER.JPG |
+| `dist/assets/clients/jkpdc.webp` | https://amitytrans.com/logos/JKPDC.JPG |
+| `dist/assets/clients/pspcl.webp` | https://amitytrans.com/logos/PSPCL.JPG |
+| `dist/assets/clients/mpmkvvcl.webp` | https://amitytrans.com/logos/MPMKVVCL.JPG |
+| `dist/assets/clients/tpwodl.webp` | https://amitytrans.com/logos/TPOWDL.JPG |
+| `dist/assets/clients/msrtc.webp` | https://amitytrans.com/logos/MSRTC.JPG |
+| `dist/assets/clients/coal-india.webp` | https://amitytrans.com/logos/SouthernCOAL.JPG |
+
+The first row moves left and the second right. Each seven-logo group has a decorative duplicate for the seamless loop, hidden from assistive technology. Logos are displayed in two spacious, full-width rows without tile borders or separate captions. Original logo colours are preserved in the assets; CSS displays them in grayscale and restores colour on logo hover. Both rows pause only while an actual logo image is hovered; blank space and section headings do not pause scrolling. Keyboard focus pauses the focused row. There is no pause button. Reduced-motion preferences show non-animated, horizontally scrollable rows with duplicates removed. Quality & Commitment follows the client section.
+
+## Our expo journey (27 October 2026)
+
+Four user-supplied exhibition photos selected from `source-images/` for varied people, team and booth scenes. Original content preserved; EXIF orientation applied and images resized to WebP (quality 86). No AI alteration. Event names and years are not asserted because they are not established by the supplied files.
+
+| Website asset | Original source photo |
+| --- | --- |
+| `dist/assets/expo-connections.webp` | `source-images/WhatsApp Image 2026-10-24 at 11.32.06 AM.jpeg` |
+| `dist/assets/expo-team.webp` | `source-images/WhatsApp Image 2026-10-24 at 11.33.17 AM.jpeg` |
+| `dist/assets/expo-presentation.webp` | `source-images/WhatsApp Image 2026-10-24 at 11.33.15 AM.jpeg` |
+| `dist/assets/expo-conversations.webp` | `source-images/WhatsApp Image 2026-10-24 at 11.33.24 AM.jpeg` |
+
+## Blog & Insights (27 October 2026)
+
+Three original editorial articles follow Quality & Commitment. The cards link to complete pages in `dist/blog/`, with source references and related reading. Technical background was checked against ABB's indoor/outdoor instrument-transformer pages and current/voltage transformer guide, Schneider Electric FAQ FA335683, and ATIPL's published product categories. The enquiry outline is an editorial planning aid, not installation guidance or model-specific ratings.
+
+Images were created with the built-in ImageGen tool and encoded as 1200 x 800 WebP (quality 85). They are illustrative AI images, not actual ATIPL products or facilities; article captions disclose this. Generated original PNG files remain in their original tool-managed location.
+
+| Website image | Article page |
+| --- | --- |
+| `dist/assets/blog-ct-vs-pt.webp` | `dist/blog/ct-vs-pt.html` |
+| `dist/assets/blog-indoor-outdoor.webp` | `dist/blog/indoor-outdoor.html` |
+| `dist/assets/blog-specification-guide.webp` | `dist/blog/specification-guide.html` |
+
+### Image generation prompts
+
+**ct-vs-pt**
+
+Use case: photorealistic-natural. Asset type: wide 3:2 editorial blog cover for an Indian instrument-transformer manufacturer's navy, blue and orange website. Premium industrial editorial photograph, realistic equipment, soft neutral daylight with subtle warm accents, restrained colour, crisp detail and clean composition. Landscape 1536x1024. No text, labels, logos, watermarks, people, diagrams or graphic overlays. Illustrative scene, not a branded product claim. Subject: two distinct compact reddish-brown epoxy resin cast medium-voltage instrument transformers on a clean pale grey workshop bench; one block-shaped current transformer with a primary conductor opening, the other a voltage transformer with insulated primary terminal posts. Three-quarter view, tactile cast resin and metal fittings, softly blurred blue-grey electrical cabinet background. Both devices fully within frame, no cross-section, no circuit connections.
+
+**indoor-outdoor**
+
+Use case: photorealistic-natural. Asset type: wide 3:2 editorial blog cover for an Indian instrument-transformer manufacturer's navy, blue and orange website. Premium industrial editorial photograph, realistic equipment, soft neutral daylight with subtle warm accents, restrained colour, crisp detail and clean composition. Landscape 1536x1024. No text, labels, logos, watermarks, people, diagrams or graphic overlays. Illustrative scene, not a branded product claim. Subject: orderly outdoor medium-voltage electrical substation with brown ribbed porcelain instrument-transformer bushings and grey metal mounting bases, steel gantry structures receding in perspective, overcast bright sky. Eye-level architectural photograph with one bushing prominent in foreground and others behind. Authentic industrial scale, calm spacious scene, no dramatic lightning or glowing electricity.
+
+**specification-guide**
+
+Use case: photorealistic-natural. Asset type: wide 3:2 editorial blog cover for an Indian instrument-transformer manufacturer's navy, blue and orange website. Premium industrial editorial photograph, realistic equipment, soft neutral daylight with subtle warm accents, restrained colour, crisp detail and clean composition. Landscape 1536x1024. No text, labels, logos, watermarks, people, diagrams or graphic overlays. Illustrative scene, not a branded product claim. Subject: close editorial still life on a clean electrical engineering desk: a compact brown resin cast current transformer beside blank technical sheets with fine unlabelled engineering linework, a metal vernier caliper and a closed dark-blue notebook. Industrial workshop background softly out of focus, warm natural sidelight, three-quarter close-up with device sharply focused. No legible lettering, no hands, no energised wires, no invented displays.
+
+## FAQ (27 October 2026)
+
+Six questions cover product categories, CT/PT differences, indoor/outdoor options, custom requirements, enquiry information and the catalogue. Answers reuse the established company/product content and the technical references recorded for the blog. No new certification, price, lead-time or product-rating claims are introduced. Native details/summary elements provide disclosure controls without new JavaScript; the team CTA reuses the existing contact dialog. No new image assets are required.
+
+### Engineering background linework
+
+`dist/assets/engineering-lines.svg` is an original code-drawn decorative vector created for this design update. It combines circuit paths, measurement rings and a stylized transformer outline. It is decorative, contains no technical specifications, and uses no third-party imagery.

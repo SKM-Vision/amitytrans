@@ -6,16 +6,54 @@
   const selectors = [...document.querySelectorAll('.slide-selector')];
   const announcement = document.querySelector('.slide-announcement');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const interval = 2500;
+  const capabilities = document.querySelector('.capabilities');
+  const counters = [...document.querySelectorAll('[data-count-to]')];
+  if (capabilities && counters.length && !reducedMotion.matches && 'IntersectionObserver' in window) {
+    let countFrame;
+    const finishCount = () => {
+      cancelAnimationFrame(countFrame);
+      counters.forEach(counter => { counter.textContent = counter.dataset.countTo; });
+      countObserver.disconnect();
+    };
+    const countObserver = new IntersectionObserver(entries => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      countObserver.disconnect();
+      let start;
+      const tick = timestamp => {
+        if (start === undefined) start = timestamp;
+        const progress = Math.min((timestamp - start) / 1800, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counters.forEach(counter => {
+          counter.textContent = String(Math.floor(Number(counter.dataset.countTo) * eased));
+        });
+        if (progress < 1) countFrame = requestAnimationFrame(tick);
+      };
+      countFrame = requestAnimationFrame(tick);
+    }, { threshold: 0.2 });
+    counters.forEach(counter => { counter.textContent = '0'; });
+    countObserver.observe(capabilities);
+    reducedMotion.addEventListener('change', event => {
+      if (event.matches) finishCount();
+    });
+  }
+  const interval = 6000;
   let currentSlide = 0;
   let timer;
   let remaining = interval;
   let startedAt = 0;
   let focusInside = false;
   let dialogOpen = false;
+  let userPaused = false;
+  const playbackButton = document.querySelector(".hero-playback");
+  playbackButton.addEventListener("click", () => {
+    userPaused = !userPaused;
+    playbackButton.setAttribute("aria-pressed", String(userPaused));
+    playbackButton.setAttribute("aria-label", userPaused ? "Play slideshow" : "Pause slideshow");
+    syncPlayback();
+  });
 
   function isPaused() {
-    return reducedMotion.matches || focusInside || dialogOpen || document.hidden;
+    return userPaused || reducedMotion.matches || focusInside || dialogOpen || document.hidden;
   }
 
   function syncPlayback() {
@@ -171,12 +209,40 @@
     button.addEventListener('click', () => openDialog(document.querySelector('#contact-dialog')));
   });
 
+  const expoDialog = document.querySelector('#expo-dialog');
+  const expoCards = [...document.querySelectorAll('[data-expo-index]')];
+  let expoIndex = 0;
+  function showExpoPhoto(index) {
+    expoIndex = (index + expoCards.length) % expoCards.length;
+    const card = expoCards[expoIndex];
+    const source = card.querySelector('img');
+    const photo = expoDialog.querySelector('.expo-dialog-photo');
+    photo.src = source.src;
+    photo.alt = source.alt;
+    expoDialog.querySelector('#expo-dialog-title').textContent = card.querySelector('.expo-card-caption').textContent.trim();
+    expoDialog.querySelector('.expo-photo-count').textContent = `Photo ${expoIndex + 1} of ${expoCards.length}`;
+  }
+  function openExpo(index) {
+    showExpoPhoto(index);
+    openDialog(expoDialog);
+  }
+  expoCards.forEach((card, index) => card.addEventListener('click', () => openExpo(index)));
+  document.querySelector('[data-open-expo]').addEventListener('click', () => openExpo(0));
+  document.querySelector('[data-expo-previous]').addEventListener('click', () => showExpoPhoto(expoIndex - 1));
+  document.querySelector('[data-expo-next]').addEventListener('click', () => showExpoPhoto(expoIndex + 1));
+  expoDialog.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      showExpoPhoto(expoIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
+
   const productSearch = document.querySelector('#product-search');
   const resultList = document.querySelector('.search-results');
   const products = [
-    { name: 'Current Transformers', detail: 'Indoor, outdoor dry type and oil cooled CTs', keywords: 'ct current resin oil dry indoor outdoor', url: 'https://amitytrans.com/products.php' },
-    { name: 'Voltage Transformers', detail: 'Indoor and outdoor potential transformers', keywords: 'pt vt potential voltage resin oil dry indoor outdoor', url: 'https://amitytrans.com/products.php' },
-    { name: 'Metering Solutions', detail: 'CT/PT combined units and metering cubicles', keywords: 'metering cubicle combined ct pt', url: 'https://amitytrans.com/products.php' },
+    { name: 'Current Transformers', detail: 'Indoor, outdoor dry type and oil cooled CTs', keywords: 'ct current resin oil dry indoor outdoor', url: '#panel-ct' },
+    { name: 'Voltage Transformers', detail: 'Indoor and outdoor potential transformers', keywords: 'pt vt potential voltage resin oil dry indoor outdoor', url: '#panel-pt' },
+    { name: 'Metering Solutions', detail: 'CT/PT combined units and metering cubicles', keywords: 'metering cubicle combined ct pt', url: '#panel-metering' },
     { name: 'Product Catalogue', detail: 'Download the full ATIPL catalogue (PDF)', keywords: 'catalogue brochure pdf lt control panel busduct residual', url: 'assets/atipl-catalogue.pdf' }
   ];
   function renderResults() {
@@ -187,19 +253,24 @@
       const item = document.createElement('li');
       const link = document.createElement('a');
       link.href = product.url;
-      link.target = '_blank';
-      link.rel = 'noopener';
+      const external = !product.url.startsWith('#');
+      if (external) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      } else {
+        link.addEventListener('click', () => document.querySelector('#search-dialog').close());
+      }
       const text = document.createElement('span');
       text.textContent = product.name;
       const detail = document.createElement('small');
       detail.textContent = product.detail;
       text.append(detail);
       const hint = document.createElement('span');
-      hint.textContent = '↗';
+      hint.textContent = external ? '↗' : '→';
       hint.setAttribute('aria-hidden', 'true');
       const accessibleHint = document.createElement('span');
       accessibleHint.className = 'sr-only';
-      accessibleHint.textContent = ' (opens in a new tab)';
+      accessibleHint.textContent = external ? ' (opens in a new tab)' : '';
       link.append(text, hint, accessibleHint);
       item.append(link);
       resultList.append(item);

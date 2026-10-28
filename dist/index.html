@@ -9,9 +9,11 @@
   <link rel="icon" href="assets/atipl-logo.jpg" type="image/jpeg">
   <link rel="preload" as="image" href="assets/hero-generation.webp" imagesrcset="assets/hero-generation-mobile.webp 960w, assets/hero-generation.webp 1672w" imagesizes="100vw">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="experience.css">
   <script src="script.js" defer></script>
+  <script src="experience.js" defer></script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
@@ -20,9 +22,7 @@
     <symbol id="phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3c1.2 2.4 2.6 3.8 5 5l3-3 5 3c0 3-2 5-5 5C9 21 3 15 3 8c0-3 2-5 5-5Z"/></symbol>
     <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
     <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-    <symbol id="industry-grid" viewBox="0 0 48 48"><path d="M20 6h8M23 6l-9 36M25 6l9 36M12 16h24M8 26h32M18 16l14 10M30 16 16 26M17 35h14M12 16v5M36 16v5M8 26v5M40 26v5M10 42h28"/></symbol>
-    <symbol id="industry-switchgear" viewBox="0 0 48 48"><rect x="6" y="7" width="36" height="35" rx="3"/><path d="M18 7v35M30 7v35M10 14h4M22 14h4M34 14h4M14 25v6M26 25v6M38 25v6M10 36h4M22 36h4M34 36h4M10 42v3M38 42v3"/></symbol>
-    <symbol id="industry-factory" viewBox="0 0 48 48"><path d="M5 42V23l12 6V19l13 7V8h8v34ZM30 15h8M10 34h3M20 34h3M30 34h3M10 42v-4h5v4M35 3h4"/></symbol>
+    <symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 11h18M7 15h3M14 15h3M7 18h3"/></symbol>
     <symbol id="quality-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
     <symbol id="quality-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
     <symbol id="quality-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15M6 8h3M6 12h3M15 8h3M15 12h3"/></symbol>
@@ -36,11 +36,11 @@
         <span class="brand-copy"><strong>AMITYTRANS</strong><span>TECHNO (I) PVT. LTD.</span></span>
       </a>
       <div class="nav-links" id="navigation">
-        <a class="nav-link is-current" href="./" aria-current="page">Home</a>
+        <a class="nav-link is-current" href="#top" aria-current="location">Home</a>
         <a class="nav-link" href="#about">About Us</a>
         <a class="nav-link" href="#products">Our Products</a>
-        <a class="nav-link" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener">Catalogue<span class="sr-only"> (opens PDF in a new tab)</span></a>
-        <a class="nav-link" href="https://amitytrans.com/gallery.php" target="_blank" rel="noopener">Gallery<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="nav-link" href="#blog">Blogs</a>
+        <a class="nav-link" href="#expo">Gallery</a>
       </div>
       <div class="nav-actions">
         <button class="search-toggle icon-button" aria-label="Search products" aria-haspopup="dialog" data-open-search><svg><use href="#search"/></svg></button>
@@ -52,6 +52,7 @@
 
   <main id="main">
     <section class="hero" aria-roledescription="carousel" aria-label="Amitytrans highlights" tabindex="0">
+      <div class="hero-blueprint" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="slides">
         <article class="slide slide-generation is-active" id="slide-1" role="group" aria-roledescription="slide" aria-label="1 of 3: Power generation">
           <picture class="slide-art">
@@ -64,8 +65,8 @@
             <h1><span class="heading-intro">Transformers For</span><span class="heading-main">Power <em>Generation</em></span></h1>
             <p class="hero-description">Precision where power begins.<br>Engineering for every connection.</p>
             <div class="hero-actions">
-              <a class="primary-button" href="tel:+917447441371">Call Us Now<svg><use href="#arrow"/></svg></a>
-              <a class="catalogue-link" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener"><svg><use href="#download"/></svg>Download Catalogue<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+              <a class="primary-button" href="#products">Explore Products<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+              <button class="hero-enquiry" data-open-contact aria-haspopup="dialog">Discuss your requirement<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </div>
         </article>
@@ -80,8 +81,8 @@
             <h2><span class="heading-intro">Transformers For</span><span class="heading-main">Power <em>Protection</em></span></h2>
             <p class="hero-description">Precision in every measurement.<br>Confidence in every connection.</p>
             <div class="hero-actions">
-              <a class="primary-button" href="tel:+917447441371">Call Us Now<svg><use href="#arrow"/></svg></a>
-              <a class="catalogue-link" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener"><svg><use href="#download"/></svg>Download Catalogue<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+              <a class="primary-button" href="#products">Explore Products<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+              <button class="hero-enquiry" data-open-contact aria-haspopup="dialog">Discuss your requirement<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </div>
         </article>
@@ -96,8 +97,8 @@
             <h2><span class="heading-intro">Transformers For</span><span class="heading-main">Greener <em>Future</em></span></h2>
             <p class="hero-description">Thoughtful engineering.<br>A brighter energy future.</p>
             <div class="hero-actions">
-              <a class="primary-button" href="tel:+917447441371">Call Us Now<svg><use href="#arrow"/></svg></a>
-              <a class="catalogue-link" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener"><svg><use href="#download"/></svg>Download Catalogue<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+              <a class="primary-button" href="#products">Explore Products<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+              <button class="hero-enquiry" data-open-contact aria-haspopup="dialog">Discuss your requirement<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </div>
         </article>
@@ -107,8 +108,9 @@
       <button class="slide-arrow slide-next" aria-label="Next slide"><svg><use href="#chevron"/></svg></button>
 
       <div class="hero-bottom">
-        <p class="hero-caption">Instrument transformers.<span>Engineered for your world.</span></p>
+        <a class="hero-scroll" href="#products"><span class="scroll-cue" aria-hidden="true"><svg><use href="#arrow"/></svg></span><span>Discover the range<small>Precision. Protection. Performance.</small></span></a>
         <div class="carousel-controls">
+          <button class="hero-playback icon-button" type="button" aria-label="Pause slideshow" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path class="pause-glyph" d="M9 6v12M15 6v12"/><path class="play-glyph" d="m9 5 10 7-10 7Z"/></svg></button>
           <div class="slide-selectors" role="group" aria-label="Choose a slide">
             <button class="slide-selector is-active" aria-label="Show Power Generation slide" aria-controls="slide-1" aria-current="true" data-slide="0"><span></span></button>
             <button class="slide-selector" aria-label="Show Power Protection slide" aria-controls="slide-2" data-slide="1"><span></span></button>
@@ -127,18 +129,22 @@
           <li class="certification">
             <img src="assets/iso-9001.svg" width="108" height="108" alt="ISO 9001:2015 certification" loading="lazy">
             <h3>ISO 9001:2015</h3>
+            <details class="certification-detail"><summary>Certification focus<svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Quality management</p></details>
           </li>
           <li class="certification">
             <img src="assets/iso-14001.svg" width="108" height="108" alt="ISO 14001:2015 certification" loading="lazy">
             <h3>ISO 14001:2015</h3>
+            <details class="certification-detail"><summary>Certification focus<svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Environmental management</p></details>
           </li>
           <li class="certification">
             <img src="assets/iso-45001.svg" width="108" height="108" alt="ISO 45001:2018 certification" loading="lazy">
             <h3>ISO 45001:2018</h3>
+            <details class="certification-detail"><summary>Certification focus<svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Occupational health &amp; safety</p></details>
           </li>
           <li class="certification">
             <img class="msedcl-logo" src="assets/msedcl-logo.png" width="451" height="175" alt="Mahavitaran, Maharashtra State Electricity Distribution Company Limited (MSEDCL)" loading="lazy">
             <h3>MSEDCL Approved</h3>
+            <details class="certification-detail"><summary>Certification focus<svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Utility approval</p></details>
           </li>
         </ul>
       </div>
@@ -150,11 +156,11 @@
           <h2 id="about-title">Amitytrans Techno</h2>
           <p class="about-subtitle">Instrument transformer manufacturers in India</p>
           <div class="about-description">
-            <p>Amitytrans Techno (I) Pvt. Ltd. (ATIPL) is an instrument transformer manufacturer based in Aurangabad, Maharashtra. Established in 2016, we design, manufacture and supply solutions for the electrical power distribution network.</p>
-            <p>Our range includes indoor resin cast current transformers (CTs) and potential/voltage transformers (PTs/VTs), outdoor dry type and oil cooled transformers, and CT/PT metering solutions. Our catalogue covers dry type CTs and VTs up to 36 kV HSV and outdoor oil cooled CTs and VTs up to 145 kV HSV.</p>
-            <p>With a team bringing more than 25 years of experience across design, manufacturing, quality and production, we serve utilities, private customers and switchgear manufacturers. Our focus is consistent quality, customer requirements and continual improvement.</p>
+            <p>Established in 2016 in Aurangabad, Maharashtra, Amitytrans Techno (I) Pvt. Ltd. (ATIPL) designs and manufactures instrument transformers for power distribution. Our range includes indoor and outdoor CTs, PTs/VTs and metering solutions, with dry type units up to 36 kV HSV and oil cooled units up to 145 kV HSV.</p>
+            <p>Our team brings over 25 years of experience in design, manufacturing and quality, serving utilities, private customers and switchgear manufacturers. We focus on reliable products, customer requirements and continual improvement.</p>
           </div>
-          <a class="primary-button about-button" href="https://amitytrans.com/about.php" target="_blank" rel="noopener">Know More<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> about ATIPL (opens in a new tab)</span></a>
+          <div class="about-highlights" aria-label="ATIPL at a glance"><span><strong>2016</strong>Established</span><span><strong>25+ years</strong>Team experience</span><span><strong>CT / PT</strong>Our expertise</span></div>
+          <a class="about-text-link" href="#quality">See our commitment to quality<svg aria-hidden="true"><use href="#arrow"/></svg></a>
         </div>
         <div class="about-gallery" aria-label="Inside Amitytrans Techno">
           <figure class="about-photo about-photo-tall">
@@ -178,12 +184,17 @@
       <div class="product-range-inner">
         <p class="section-eyebrow"><span aria-hidden="true"></span>Product Range</p>
         <div class="product-range-heading">
-          <h2 id="product-range-title">Instrument Transformers Product Range</h2>
-          <a class="primary-button range-button" href="https://amitytrans.com/products.php" target="_blank" rel="noopener">Explore All Products<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+          <h2 id="product-range-title">Precision for every<br><span>power connection.</span></h2>
+          <a class="product-catalogue-link" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener">Product catalogue<svg aria-hidden="true"><use href="#download"/></svg><span class="sr-only"> (PDF, opens in a new tab)</span></a>
         </div>
         <p class="product-range-intro">Current transformers, potential transformers and metering cubicles for electrical measurement, metering and protection.</p>
+        <div class="product-tabs" aria-label="Product categories" hidden>
+          <button type="button" id="tab-ct" data-product-tab="ct" aria-controls="panel-ct"><span>01</span>Current transformers<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          <button type="button" id="tab-pt" data-product-tab="pt" aria-controls="panel-pt"><span>02</span>Potential transformers<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          <button type="button" id="tab-metering" data-product-tab="metering" aria-controls="panel-metering"><span>03</span>Metering cubicles<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+        </div>
         <div class="product-grid">
-          <article class="product-card" aria-labelledby="ct-title">
+          <article class="product-card" id="panel-ct" data-product-panel="ct" aria-labelledby="ct-title">
             <div class="product-visual">
               <div class="product-cutout product-cutout-resin"><img src="assets/product-ct-indoor.webp" width="1600" height="1067" alt="ATIPL indoor resin cast current transformer" loading="lazy" decoding="async"></div>
               <div class="product-cutout product-cutout-outdoor"><img src="assets/product-ct-outdoor.webp" width="368" height="866" alt="ATIPL outdoor oil cooled current transformer" loading="lazy" decoding="async"></div>
@@ -191,10 +202,12 @@
             <div class="product-card-body">
               <h3 id="ct-title">Current Transformers <span>(CT)</span></h3>
               <p>Indoor resin cast, outdoor dry type and oil cooled current transformers for metering and protection applications.</p>
-              <a class="product-range-link" href="https://amitytrans.com/ctindoor.php" target="_blank" rel="noopener">Explore CT range<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+              <dl class="product-specs"><div><dt>Application</dt><dd>Measurement &amp; protection</dd></div><div><dt>Installation</dt><dd>Indoor / outdoor</dd></div><div><dt>Range</dt><dd>Resin cast, dry type &amp; oil cooled</dd></div></dl>
+              <p class="product-selection-note">For metering and protection applications. Share your ratio, accuracy and burden requirements with our team.</p>
+              <button class="product-range-link" type="button" data-open-contact data-product-enquiry="Current transformers (CT)" aria-haspopup="dialog">Discuss this product<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </article>
-          <article class="product-card" aria-labelledby="pt-title">
+          <article class="product-card" id="panel-pt" data-product-panel="pt" aria-labelledby="pt-title">
             <div class="product-visual">
               <div class="product-cutout product-cutout-resin"><img src="assets/product-pt-indoor.webp" width="1600" height="1067" alt="ATIPL indoor resin cast potential transformer" loading="lazy" decoding="async"></div>
               <div class="product-cutout product-cutout-outdoor"><img src="assets/product-pt-outdoor.webp" width="443" height="960" alt="ATIPL outdoor potential transformer with porcelain insulation" loading="lazy" decoding="async"></div>
@@ -202,20 +215,25 @@
             <div class="product-card-body">
               <h3 id="pt-title">Potential Transformers <span>(PT)</span></h3>
               <p>Indoor and outdoor voltage transformers, with dry type models up to 36 kV HSV and oil cooled models up to 145 kV HSV.</p>
-              <a class="product-range-link" href="https://amitytrans.com/ptindoor.php" target="_blank" rel="noopener">Explore PT range<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+              <dl class="product-specs"><div><dt>Application</dt><dd>Voltage measurement</dd></div><div><dt>Installation</dt><dd>Indoor / outdoor</dd></div><div><dt>Range</dt><dd>Dry type to 36 kV HSV; oil cooled to 145 kV HSV</dd></div></dl>
+              <p class="product-selection-note">For voltage measurement and protection. Share the system voltage, installation conditions and required secondary values.</p>
+              <button class="product-range-link" type="button" data-open-contact data-product-enquiry="Potential transformers (PT)" aria-haspopup="dialog">Discuss this product<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </article>
-          <article class="product-card" aria-labelledby="metering-title">
+          <article class="product-card" id="panel-metering" data-product-panel="metering" aria-labelledby="metering-title">
             <div class="product-visual product-visual-cubicles">
               <div class="product-cutout"><img src="assets/product-metering-cubicle.webp" width="960" height="1280" alt="ATIPL metering cubicle with an upper metering compartment" loading="lazy" decoding="async"></div>
             </div>
             <div class="product-card-body">
               <h3 id="metering-title">Metering Cubicles</h3>
               <p>Indoor and outdoor CT/PT metering cubicles for electrical energy measurement, with catalogue models up to 33 kV system voltage.</p>
-              <a class="product-range-link" href="https://amitytrans.com/meteringindoor.php" target="_blank" rel="noopener">Explore Metering Cubicles<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+              <dl class="product-specs"><div><dt>Application</dt><dd>Energy metering</dd></div><div><dt>Installation</dt><dd>Indoor / outdoor</dd></div><div><dt>Range</dt><dd>Catalogue models to 33 kV system voltage</dd></div></dl>
+              <p class="product-selection-note">For CT/PT metering applications. Discuss the installation, metering arrangement and available space with our team.</p>
+              <button class="product-range-link" type="button" data-open-contact data-product-enquiry="Metering cubicles" aria-haspopup="dialog">Discuss this product<svg aria-hidden="true"><use href="#arrow"/></svg></button>
             </div>
           </article>
         </div>
+        <p class="product-selection-help">Need help choosing? <button type="button" data-open-contact>Talk to our technical team<svg aria-hidden="true"><use href="#arrow"/></svg></button></p>
       </div>
     </section>
     <section class="custom-design" id="custom-design" aria-labelledby="custom-design-title">
@@ -225,7 +243,7 @@
           <p>We design and manufacture to your requirements.</p>
         </div>
         <div class="custom-design-actions">
-          <a class="custom-design-button custom-design-secondary" href="https://amitytrans.com/about.php" target="_blank" rel="noopener">Know More<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only"> about ATIPL capabilities (opens in a new tab)</span></a>
+          <a class="custom-design-button custom-design-secondary" href="#faq">How to get started<svg aria-hidden="true"><use href="#arrow"/></svg></a>
           <button class="custom-design-button custom-design-primary" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Request Custom Design<svg aria-hidden="true"><use href="#arrow"/></svg></button>
         </div>
       </div>
@@ -235,83 +253,113 @@
       <dl class="capability-grid">
         <div class="capability-item">
           <dt>Max. oil cooled range (HSV)</dt>
-          <dd><span class="capability-value">145</span> <span class="capability-unit">kV</span></dd>
+          <dd><span class="sr-only">145</span><span class="capability-value" data-count-to="145" aria-hidden="true">145</span> <span class="capability-unit">kV</span></dd>
         </div>
         <div class="capability-item">
           <dt>Max. dry type range (HSV)</dt>
-          <dd><span class="capability-value">36</span> <span class="capability-unit">kV</span></dd>
+          <dd><span class="sr-only">36</span><span class="capability-value" data-count-to="36" aria-hidden="true">36</span> <span class="capability-unit">kV</span></dd>
         </div>
         <div class="capability-item">
           <dt>Team experience (years)</dt>
-          <dd><span class="capability-value">25</span><span class="capability-unit">+</span></dd>
+          <dd><span class="sr-only">25</span><span class="capability-value" data-count-to="25" aria-hidden="true">25</span><span class="capability-unit">+</span></dd>
         </div>
         <div class="capability-item">
           <dt>Established</dt>
-          <dd><span class="capability-value">2016</span></dd>
+          <dd><span class="sr-only">2016</span><span class="capability-value" data-count-to="2016" aria-hidden="true">2016</span></dd>
         </div>
       </dl>
     </section>
-    <section class="industries-section" id="industries" aria-labelledby="industries-title">
-      <div class="industries-inner">
-        <div class="industries-heading">
-          <div class="industries-intro">
-            <p class="section-eyebrow"><span aria-hidden="true"></span>Where We Add Value</p>
-            <h2 id="industries-title">Industries &amp; Applications</h2>
-            <p>Supporting utilities, switchgear manufacturers and industrial customers with instrument transformers for electrical measurement, metering and protection.</p>
+    <section class="expo-section" id="expo" aria-labelledby="expo-title">
+      <div class="expo-inner">
+        <p class="expo-eyebrow"><svg aria-hidden="true"><use href="#calendar"/></svg>Exhibitions &amp; Events</p>
+        <div class="expo-layout">
+          <div class="expo-copy">
+            <h2 id="expo-title">Our expo<br><span>journey.</span></h2>
+            <p class="expo-subtitle">Meeting the people behind power.</p>
+            <p class="expo-description">From our booth to the exhibition floor, every conversation brings us closer. Explore moments with the ATIPL team, our visitors and the people shaping the electrical industry.</p>
+            <div class="expo-actions">
+              <button class="primary-button" data-open-expo aria-haspopup="dialog" aria-controls="expo-dialog">View expo photos<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+              <button class="expo-contact" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Connect with our team<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+            </div>
           </div>
-          <button class="primary-button industries-contact" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Discuss Your Application<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          <div class="expo-photos" aria-label="Four moments from our exhibitions">
+            <button class="expo-card expo-card-connections" data-expo-index="0" aria-haspopup="dialog" aria-controls="expo-dialog">
+              <img src="assets/expo-connections.webp" width="1435" height="1080" alt="ATIPL representative presenting a visitor with a bag at the exhibition booth" loading="lazy" decoding="async">
+              <span class="expo-tag">People</span>
+              <span class="expo-card-caption">Connections that matter<svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </button>
+            <button class="expo-card expo-card-team" data-expo-index="1" aria-haspopup="dialog" aria-controls="expo-dialog">
+              <img src="assets/expo-team.webp" width="1435" height="1080" alt="Five people together at the Amitytrans Techno exhibition booth" loading="lazy" decoding="async">
+              <span class="expo-tag">Together</span>
+              <span class="expo-card-caption">The team behind ATIPL<svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </button>
+            <button class="expo-card expo-card-presentation" data-expo-index="2" aria-haspopup="dialog" aria-controls="expo-dialog">
+              <img src="assets/expo-presentation.webp" width="1435" height="1080" alt="Two exhibition participants sharing a presentation moment in front of ATIPL transformer displays" loading="lazy" decoding="async">
+              <span class="expo-tag">Connections</span>
+              <span class="expo-card-caption">Meeting industry peers<svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </button>
+            <button class="expo-card expo-card-conversations" data-expo-index="3" aria-haspopup="dialog" aria-controls="expo-dialog">
+              <img src="assets/expo-conversations.webp" width="1435" height="1080" alt="ATIPL representatives and visitors in conversation beside the booth's transformer product displays" loading="lazy" decoding="async">
+              <span class="expo-tag">On the floor</span>
+              <span class="expo-card-caption">Conversations that count<svg aria-hidden="true"><use href="#arrow"/></svg></span>
+            </button>
+          </div>
         </div>
-        <div class="industries-grid">
-          <article class="industry-card" aria-labelledby="industry-utilities-title">
-            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-grid"/></svg></span><span class="industry-number" aria-hidden="true">01</span></div>
-            <h3 id="industry-utilities-title">Power Utilities &amp; Electricity Boards</h3>
-            <p>Current and voltage transformers for metering and protection in electrical power distribution networks.</p>
-            <ul class="industry-applications" aria-label="Utility applications">
-              <li>Distribution metering</li>
-              <li>Protection circuits</li>
+      </div>
+    </section>
+    <section class="clients-section" id="clients" aria-labelledby="clients-title">
+      <div class="clients-inner">
+        <div class="clients-heading">
+          <div>
+            <p class="section-eyebrow"><span aria-hidden="true"></span>Valued Relationships</p>
+            <h2 id="clients-title">Our Clients</h2>
+          </div>
+        </div>
+        <div class="clients-marquees" id="clients-marquees">
+          <div class="clients-row" tabindex="0" role="region" aria-label="Client logos, row 1">
+            <div class="clients-track">
+            <ul class="clients-group">
+              <li class="client-logo-tile"><img src="assets/clients/bhel.webp" width="93" height="94" alt="BHEL logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/nhpc.webp" width="259" height="62" alt="NHPC logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/nalco.webp" width="281" height="95" alt="NALCO logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/bses.webp" width="213" height="61" alt="BSES logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/kseb.webp" width="142" height="65" alt="KSEB logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/wesco.webp" width="233" height="94" alt="WESCO logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/ncl.webp" width="243" height="78" alt="NCL logo" loading="lazy" decoding="async"></li>
             </ul>
-            <div class="industry-products">
-              <p>Relevant products</p>
-              <ul aria-label="Products for power utilities">
-                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
-                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
-                <li><a href="#metering-title">Metering Cubicles<svg aria-hidden="true"><use href="#arrow"/></svg></a></li>
-              </ul>
-            </div>
-          </article>
-          <article class="industry-card" aria-labelledby="industry-switchgear-title">
-            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-switchgear"/></svg></span><span class="industry-number" aria-hidden="true">02</span></div>
-            <h3 id="industry-switchgear-title">Switchgear Manufacturers</h3>
-            <p>Instrument transformers for measurement and protection circuits in indoor and outdoor switchgear assemblies.</p>
-            <ul class="industry-applications" aria-label="Switchgear applications">
-              <li>Current and voltage measurement</li>
-              <li>Panel integration</li>
+            <ul class="clients-group" aria-hidden="true">
+              <li class="client-logo-tile"><img src="assets/clients/bhel.webp" width="93" height="94" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/nhpc.webp" width="259" height="62" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/nalco.webp" width="281" height="95" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/bses.webp" width="213" height="61" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/kseb.webp" width="142" height="65" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/wesco.webp" width="233" height="94" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/ncl.webp" width="243" height="78" alt="" loading="lazy" decoding="async"></li>
             </ul>
-            <div class="industry-products">
-              <p>Relevant products</p>
-              <ul aria-label="Products for switchgear manufacturers">
-                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
-                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
-              </ul>
             </div>
-          </article>
-          <article class="industry-card" aria-labelledby="industry-industrial-title">
-            <div class="industry-card-top"><span class="industry-icon"><svg aria-hidden="true"><use href="#industry-factory"/></svg></span><span class="industry-number" aria-hidden="true">03</span></div>
-            <h3 id="industry-industrial-title">Industrial Customers</h3>
-            <p>CTs, PTs and metering cubicles for electrical measurement and energy metering in industrial power systems.</p>
-            <ul class="industry-applications" aria-label="Industrial applications">
-              <li>Incoming supply metering</li>
-              <li>Load measurement</li>
+          </div>
+          <div class="clients-row" tabindex="0" role="region" aria-label="Client logos, row 2">
+            <div class="clients-track clients-track-reverse">
+            <ul class="clients-group">
+              <li class="client-logo-tile"><img src="assets/clients/apdcl.webp" width="170" height="150" alt="APDCL logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/jkpdc.webp" width="176" height="79" alt="JKPDC logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/pspcl.webp" width="220" height="77" alt="PSPCL logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/mpmkvvcl.webp" width="151" height="112" alt="MPMKVVCL logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/tpwodl.webp" width="258" height="64" alt="TPWODL logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/msrtc.webp" width="137" height="106" alt="MSRTC logo" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/coal-india.webp" width="90" height="95" alt="Coal India logo" loading="lazy" decoding="async"></li>
             </ul>
-            <div class="industry-products">
-              <p>Relevant products</p>
-              <ul aria-label="Products for industrial customers">
-                <li><a href="#ct-title">CT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: current transformers</span></a></li>
-                <li><a href="#pt-title">PT<svg aria-hidden="true"><use href="#arrow"/></svg><span class="sr-only">: potential transformers</span></a></li>
-                <li><a href="#metering-title">Metering Cubicles<svg aria-hidden="true"><use href="#arrow"/></svg></a></li>
-              </ul>
+            <ul class="clients-group" aria-hidden="true">
+              <li class="client-logo-tile"><img src="assets/clients/apdcl.webp" width="170" height="150" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/jkpdc.webp" width="176" height="79" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/pspcl.webp" width="220" height="77" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/mpmkvvcl.webp" width="151" height="112" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/tpwodl.webp" width="258" height="64" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/msrtc.webp" width="137" height="106" alt="" loading="lazy" decoding="async"></li>
+              <li class="client-logo-tile"><img src="assets/clients/coal-india.webp" width="90" height="95" alt="" loading="lazy" decoding="async"></li>
+            </ul>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -327,30 +375,200 @@
         </div>
         <div class="quality-visual" aria-label="Our approach to quality">
           <div class="quality-circle"><img src="assets/quality-workshop.webp" width="1280" height="960" alt="ATIPL team working on instrument transformers in the company's workshop" loading="lazy" decoding="async"></div>
-          <article class="quality-principle quality-principle-consistency">
-            <svg aria-hidden="true"><use href="#quality-shield"/></svg>
+          <details class="quality-principle quality-principle-consistency">
+            <summary><svg aria-hidden="true"><use href="#quality-shield"/></svg>
             <h3>Quality</h3>
-            <p>Consistent products</p>
-          </article>
-          <article class="quality-principle quality-principle-customer">
-            <svg aria-hidden="true"><use href="#quality-target"/></svg>
+            <p>Consistent products</p><span class="quality-more">Learn more <span aria-hidden="true">+</span></span></summary>
+            <p class="quality-detail">Our quality policy focuses on consistent products through design and manufacture.</p>
+          </details>
+          <details class="quality-principle quality-principle-customer">
+            <summary><svg aria-hidden="true"><use href="#quality-target"/></svg>
             <h3>Customer</h3>
-            <p>Requirements first</p>
-          </article>
-          <article class="quality-principle quality-principle-standards">
-            <svg aria-hidden="true"><use href="#quality-book"/></svg>
+            <p>Requirements first</p><span class="quality-more">Learn more <span aria-hidden="true">+</span></span></summary>
+            <p class="quality-detail">Share your application and specification so our team can review your requirements.</p>
+          </details>
+          <details class="quality-principle quality-principle-standards">
+            <summary><svg aria-hidden="true"><use href="#quality-book"/></svg>
             <h3>IS / IEC</h3>
-            <p>Catalogue standards</p>
-          </article>
-          <article class="quality-principle quality-principle-improvement">
-            <svg aria-hidden="true"><use href="#quality-improve"/></svg>
+            <p>Catalogue standards</p><span class="quality-more">Learn more <span aria-hidden="true">+</span></span></summary>
+            <p class="quality-detail">Refer to the catalogue for published standards and confirm ratings for your specific enquiry.</p>
+          </details>
+          <details class="quality-principle quality-principle-improvement">
+            <summary><svg aria-hidden="true"><use href="#quality-improve"/></svg>
             <h3>Improve</h3>
-            <p>Continual improvement</p>
+            <p>Continual improvement</p><span class="quality-more">Learn more <span aria-hidden="true">+</span></span></summary>
+            <p class="quality-detail">Continual improvement is part of our published approach to quality.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="blog-section" id="blog" aria-labelledby="blog-title">
+      <div class="blog-inner">
+        <p class="section-eyebrow"><span aria-hidden="true"></span>From the ATIPL journal</p>
+        <div class="blog-heading">
+          <h2 id="blog-title">Insights for a<br><span>better connection.</span></h2>
+          <p>Understand the essentials. Explore the applications.<br>Practical reads from the world of instrument transformers.</p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <a class="blog-card-link" href="blog/ct-vs-pt.html" aria-labelledby="blog-ct-vs-pt-title">
+              <div class="blog-card-image"><img src="assets/blog-ct-vs-pt.webp" width="1200" height="800" alt="Illustrative view of two brown resin cast instrument transformers on an engineering workbench" loading="lazy" decoding="async"><span class="blog-image-arrow"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div>
+              <div class="blog-card-copy">
+                <p class="blog-meta"><span>Transformer basics</span><span>1 min read</span></p>
+                <h3 id="blog-ct-vs-pt-title">CT vs PT: understanding the difference</h3>
+                <p class="blog-card-description">Two essential devices. Two different roles. Get to know the instrument transformers behind electrical measurement and protection.</p>
+                <span class="blog-read-link">Read article <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="blog-card">
+            <a class="blog-card-link" href="blog/indoor-outdoor.html" aria-labelledby="blog-indoor-outdoor-title">
+              <div class="blog-card-image"><img src="assets/blog-indoor-outdoor.webp" width="1200" height="800" alt="Illustrative view of porcelain instrument-transformer bushings in an outdoor electrical substation" loading="lazy" decoding="async"><span class="blog-image-arrow"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div>
+              <div class="blog-card-copy">
+                <p class="blog-meta"><span>Application guide</span><span>2 min read</span></p>
+                <h3 id="blog-indoor-outdoor-title">Indoor or outdoor? Start with the application.</h3>
+                <p class="blog-card-description">From enclosed switchgear to open substations, explore why the installation environment matters when choosing a transformer.</p>
+                <span class="blog-read-link">Read article <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+              </div>
+            </a>
+          </article>
+          <article class="blog-card">
+            <a class="blog-card-link" href="blog/specification-guide.html" aria-labelledby="blog-specification-guide-title">
+              <div class="blog-card-image"><img src="assets/blog-specification-guide.webp" width="1200" height="800" alt="Illustrative engineering desk with a resin cast transformer, caliper, technical sheets and blue notebook" loading="lazy" decoding="async"><span class="blog-image-arrow"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div>
+              <div class="blog-card-copy">
+                <p class="blog-meta"><span>Project planning</span><span>2 min read</span></p>
+                <h3 id="blog-specification-guide-title">A clearer brief. A better transformer enquiry.</h3>
+                <p class="blog-card-description">Ratios, accuracy, burden and installation details: bring the right information to your next CT or PT discussion.</p>
+                <span class="blog-read-link">Read article <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+              </div>
+            </a>
           </article>
         </div>
       </div>
     </section>
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="faq-inner">
+        <div class="faq-intro">
+          <p class="section-eyebrow"><span aria-hidden="true"></span>Helpful answers</p>
+          <h2 id="faq-title">Frequently asked<br><span>questions.</span></h2>
+          <p class="faq-description">From choosing a product to starting a conversation, find a little more clarity for your next project.</p>
+          <div class="faq-help">
+            <span class="faq-help-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-1 1v-9.5a8.5 8.5 0 0 1 17 0Z"/><path d="M7 10h9M7 14h6"/></svg></span>
+            <h3>Have a different question?</h3>
+            <p>Tell us about your application. Our team can help you take the next step.</p>
+            <button class="primary-button" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Talk to our team<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" name="atipl-faq" open>
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">01</span>What products does ATIPL manufacture?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>Our range includes current transformers (CTs), potential or voltage transformers (PTs/VTs), and CT/PT metering solutions, including metering cubicles. We offer indoor and outdoor product categories for electrical measurement, metering and protection. <a href="#products">Explore our product range</a> to find the relevant category.</p></div>
+          </details>
+          <details class="faq-item" name="atipl-faq">
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">02</span>What is the difference between a CT and a PT?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>A CT provides a scaled current signal, while a PT (also called a VT) provides a scaled voltage signal. Both serve compatible measurement and protection equipment. The right device depends on your application and specified ratings. Our <a href="blog/ct-vs-pt.html">CT vs PT guide</a> explains the basics.</p></div>
+          </details>
+          <details class="faq-item" name="atipl-faq">
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">03</span>Do you offer indoor and outdoor transformers?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>Yes. ATIPL lists indoor and outdoor CTs and PTs in its product range. Share the installation location, available space and project specification so the team can review a suitable option. Read our <a href="blog/indoor-outdoor.html">indoor and outdoor application guide</a> for an introduction.</p></div>
+          </details>
+          <details class="faq-item" name="atipl-faq">
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">04</span>Can you review a custom transformer requirement?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>Yes. Share your electrical requirements, interface drawings and application details with the ATIPL team. We can review your requirement and discuss a suitable configuration. The final design, ratings and supply scope are confirmed for the specific enquiry.</p></div>
+          </details>
+          <details class="faq-item" name="atipl-faq">
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">05</span>What information should I include in an enquiry?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>Include the product type, intended application, required primary and secondary values, accuracy and burden requirements, installation conditions and quantity. Attach your project specification and drawings where available, and mention the required delivery date. Our <a href="blog/specification-guide.html">enquiry planning guide</a> helps you bring these details together.</p></div>
+          </details>
+          <details class="faq-item" name="atipl-faq">
+            <summary><span class="faq-question"><span class="faq-number" aria-hidden="true">06</span>Where can I find the product catalogue?</span><span class="faq-toggle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path class="faq-plus-stroke" d="M12 5v14"/></svg></span></summary>
+            <div class="faq-answer"><p>You can <a href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener">open our product catalogue<span class="sr-only"> (PDF, opens in a new tab)</span></a> to explore the range and published specifications. For a project-specific selection, share the relevant requirements with our team.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="closing-cta" id="enquiry" aria-labelledby="closing-cta-title">
+      <div class="closing-cta-inner">
+        <div class="closing-cta-copy">
+          <p class="section-eyebrow"><span aria-hidden="true"></span>Let’s build what’s next</p>
+          <h2 id="closing-cta-title">Your next project.<br>Let’s connect<span>.</span></h2>
+          <p class="closing-cta-description">Instrument transformers, engineered around your requirements.</p>
+        </div>
+        <button class="closing-enquiry-button" data-open-contact aria-haspopup="dialog" aria-controls="contact-dialog">Request a CT/PT quote<span class="closing-button-icon"><svg aria-hidden="true"><use href="#arrow"/></svg></span></button>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-company">
+          <a class="footer-brand" href="#top" aria-label="Amitytrans Techno home">
+            <img src="assets/atipl-logo.jpg" width="60" height="60" alt="ATIPL company logo" loading="lazy">
+            <span><strong>AMITYTRANS</strong><span>TECHNO (I) PVT. LTD.</span></span>
+          </a>
+          <p class="footer-company-description">Precision in every measurement.<br>Protection in every connection.<br>Instrument transformers by ATIPL.</p>
+          <a class="footer-catalogue" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener">Download catalogue<svg aria-hidden="true"><use href="#download"/></svg><span class="sr-only"> (PDF, opens in a new tab)</span></a>
+        </div>
+        <nav class="footer-nav" aria-labelledby="footer-links-title">
+          <h2 id="footer-links-title">Quick links</h2>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#quality">Quality &amp; commitment</a></li>
+            <li><a href="#clients">Our clients</a></li>
+            <li><a href="#expo">Our expo journey</a></li>
+            <li><a href="#blog">Blog &amp; insights</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-labelledby="footer-products-title">
+          <h2 id="footer-products-title">Product range</h2>
+          <ul>
+            <li><a href="#panel-ct">Current transformers</a></li>
+            <li><a href="#panel-pt">Potential transformers</a></li>
+            <li><a href="#panel-metering">Metering cubicles</a></li>
+            <li><a href="#custom-design">Custom requirements</a></li>
+            <li><a href="#products">Explore all products</a></li>
+          </ul>
+        </nav>
+        <div class="footer-contact" aria-labelledby="footer-contact-title">
+          <h2 id="footer-contact-title">Contact us</h2>
+          <div class="footer-contact-block">
+            <p class="footer-contact-label">Sales &amp; technical enquiries</p>
+            <a class="footer-email" href="mailto:info@amitytrans.com">info@amitytrans.com</a>
+            <a class="footer-phone" href="tel:+917447441371">+91 74474 41371<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          </div>
+          <div class="footer-contact-block">
+            <p class="footer-contact-label">Office &amp; works</p>
+            <address>Gut No. 74, Plot No. 30, Karodi,<br>MIDC Waluj, Aurangabad,<br>Maharashtra 431136, India.</address>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Amitytrans Techno (I) Pvt. Ltd.</p>
+        <p class="footer-location"><span aria-hidden="true"></span>Aurangabad, Maharashtra, India</p>
+        <div class="footer-connect">
+          <span>Stay connected</span>
+          <a class="footer-icon-link" href="mailto:info@amitytrans.com" aria-label="Email ATIPL"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
+          <a class="footer-icon-link" href="tel:+917447441371" aria-label="Call ATIPL"><svg aria-hidden="true"><use href="#phone"/></svg></a>
+          <a class="footer-icon-link footer-back-top" href="#top" aria-label="Back to top"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">AMITYTRANS</div>
+    </div>
+  </footer>
+
+  <dialog class="site-dialog expo-dialog" id="expo-dialog" aria-labelledby="expo-dialog-title">
+    <button class="dialog-close icon-button" aria-label="Close expo photos"><svg aria-hidden="true"><use href="#close"/></svg></button>
+    <p class="dialog-eyebrow">OUR EXPO JOURNEY</p>
+    <h2 id="expo-dialog-title">Connections that matter</h2>
+    <img class="expo-dialog-photo" src="assets/expo-connections.webp" width="1435" height="1080" alt="">
+    <div class="expo-dialog-controls">
+      <button class="icon-button" data-expo-previous aria-label="Previous expo photo"><svg class="expo-previous-icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+      <p class="expo-photo-count" aria-live="polite" aria-atomic="true">Photo 1 of 4</p>
+      <button class="icon-button" data-expo-next aria-label="Next expo photo"><svg aria-hidden="true"><use href="#arrow"/></svg></button>
+    </div>
+  </dialog>
 
   <dialog class="site-dialog" id="contact-dialog" aria-labelledby="contact-title">
     <button class="dialog-close icon-button" aria-label="Close contact details"><svg><use href="#close"/></svg></button>
