@@ -51,7 +51,7 @@
   .slide-previous { left: auto; right: 66px; }
   .slide-next { right: 24px; }
   .slide-arrow svg { width: 19px; }
-  .hero-playback { width: 32px; }
+  .hero-playback { display: none; }
   .slide-selector { width: 20px; }
   .slide-selector.is-active { width: 30px; }
   .closing-cta { display: none; }
