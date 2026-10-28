@@ -1,12 +1,12 @@
 # Asset sources
 
-- `dist/assets/atipl-logo.jpg`: official company logo downloaded from https://amitytrans.com/images/newlogo.jpg on 18 October 2026. Preserved as supplied.
+- `dist/assets/atipl-logo.webp`: official company logo downloaded from https://amitytrans.com/images/newlogo.jpg on 18 October 2026. Resized to 192px and encoded as lossless WebP for the website; original source is linked above.
 - `dist/assets/atipl-catalogue.pdf`: unchanged copy of `../ATIPL Catlauge.pdf`, supplied by the user.
-- `dist/assets/hero-power.webp` and `hero-power-mobile.webp`: illustrative hero artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Not a photograph of an ATIPL site.
-- `dist/assets/hero-green.webp` and `hero-green-mobile.webp`: conceptual sustainability artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. It is a visual concept, not proof of product environmental performance.
-- `dist/assets/hero-generation.webp` and `hero-generation-mobile.webp`: close-up substation transformer artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Used for the first slide; not a photograph of an ATIPL facility or a documented ATIPL product.
+- `dist/assets/hero-power.webp`: illustrative hero artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Not a photograph of an ATIPL site.
+- `dist/assets/hero-green.webp`: conceptual sustainability artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. It is a visual concept, not proof of product environmental performance.
+- `dist/assets/hero-generation.webp`: close-up substation transformer artwork generated with the built-in ImageGen tool, then encoded to WebP with Pillow. Used for the first slide; not a photograph of an ATIPL facility or a documented ATIPL product.
 
-The mobile variants are smaller versions of the same artwork; responsive CSS controls composition. Artwork contains no embedded headings, third-party trademarks or approval badges. All typography and controls are HTML/CSS.
+Obsolete cropped mobile variants were removed during optimization; the current mobile hero uses the dedicated portrait assets documented below. Artwork contains no embedded headings, third-party trademarks or approval badges. All typography and controls are HTML/CSS.
 
 ## Final generation prompts
 
@@ -176,4 +176,4 @@ Three new portrait compositions were generated with the built-in ImageGen tool, 
 - `dist/assets/hero-power-mobile-v2.webp`: substation instrument transformers in a blue-hour landscape.
 - `dist/assets/hero-green-mobile-v2.webp`: a seedling in a glass lightbulb, lit by dawn.
 
-Each website file is 960 ? 1440 and under 100 KB. Full generated PNGs and the exact final prompt set are saved under `source-images/mobile-hero/`; see its `README.md`. Desktop hero assets remain unchanged.
+Each website file is 960 ? 1440 and under 100 KB. The exact final prompt set is retained in `source-images/mobile-hero/README.md`. Duplicate full-size generated PNGs were removed from this checkout during optimization; the final optimized WebP artwork remains in `dist/assets/`. Desktop hero assets remain unchanged.

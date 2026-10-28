@@ -3,3 +3,10 @@ node_modules/
 preview-*.png
 diagnostic-*.png
 *.tar.gz
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+Thumbs.db
+.DS_Store

@@ -1,10 +1,10 @@
 # Mobile hero artwork
 
-Generated with the built-in ImageGen tool. These are new portrait compositions, not crops of the desktop assets. Originals remain at their generated locations; project copies and optimized WebP files are saved below.
+Generated with the built-in ImageGen tool. These are new portrait compositions, not crops of the desktop assets. Originals remain at their generated locations. Duplicate PNG copies were removed from this checkout during storage cleanup; the website WebP files and prompts below are retained.
 
 ## generation
 
-- Original: `source-images/mobile-hero/hero-generation-portrait.png`
+- Former duplicate PNG (removed during cleanup): `source-images/mobile-hero/hero-generation-portrait.png`
 - Website asset: `dist/assets/hero-generation-mobile-v2.webp` (960 × 1440)
 - Intended use: illustrative mobile hero photography, not a product specification image.
 
@@ -14,7 +14,7 @@ Use case: ads-marketing. Create a NEW photorealistic premium industrial website 
 
 ## protection
 
-- Original: `source-images/mobile-hero/hero-power-portrait.png`
+- Former duplicate PNG (removed during cleanup): `source-images/mobile-hero/hero-power-portrait.png`
 - Website asset: `dist/assets/hero-power-mobile-v2.webp` (960 × 1440)
 - Intended use: illustrative mobile hero photography, not a product specification image.
 
@@ -24,7 +24,7 @@ Use case: ads-marketing. Create a NEW photorealistic premium electrical engineer
 
 ## green
 
-- Original: `source-images/mobile-hero/hero-green-portrait.png`
+- Former duplicate PNG (removed during cleanup): `source-images/mobile-hero/hero-green-portrait.png`
 - Website asset: `dist/assets/hero-green-mobile-v2.webp` (960 × 1440)
 - Intended use: illustrative mobile hero photography, not a product specification image.
 
