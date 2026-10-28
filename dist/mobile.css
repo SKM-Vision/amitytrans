@@ -57,7 +57,7 @@
   .closing-cta { display: none; }
 
   /* Reference-inspired mobile footer: company, contact details, then disclosures. */
-  .site-footer { padding: 38px 20px 0; background: #080e14; color: #bdc9d2; }
+  .site-footer { padding: 38px 20px 0; background: var(--navy); color: #bdc9d2; }
   .footer-grid { display: flex; flex-direction: column; gap: 0; padding: 0; }
   .footer-company { order: 0; padding-bottom: 30px; border-bottom: 1px solid #ffffff16; }
   .footer-brand { gap: 14px; }
