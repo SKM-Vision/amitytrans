@@ -167,3 +167,13 @@ Six questions cover product categories, CT/PT differences, indoor/outdoor option
 ### Engineering background linework
 
 `dist/assets/engineering-lines.svg` is an original code-drawn decorative vector created for this design update. It combines circuit paths, measurement rings and a stylized transformer outline. It is decorative, contains no technical specifications, and uses no third-party imagery.
+
+### Dedicated mobile hero artwork
+
+Three new portrait compositions were generated with the built-in ImageGen tool, rather than cropped from the desktop imagery. They are illustrative brand photography, not evidence of a specific supplied product or installation.
+
+- `dist/assets/hero-generation-mobile-v2.webp`: porcelain transformer bushings and substation fittings at dawn.
+- `dist/assets/hero-power-mobile-v2.webp`: substation instrument transformers in a blue-hour landscape.
+- `dist/assets/hero-green-mobile-v2.webp`: a seedling in a glass lightbulb, lit by dawn.
+
+Each website file is 960 ? 1440 and under 100 KB. Full generated PNGs and the exact final prompt set are saved under `source-images/mobile-hero/`; see its `README.md`. Desktop hero assets remain unchanged.

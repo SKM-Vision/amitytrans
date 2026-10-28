@@ -117,6 +117,28 @@
     email.setAttribute('href', defaults.email);
   });
 
+  // Mobile footer disclosures; desktop navigation stays expanded and readable.
+  const mobileFooter = window.matchMedia('(max-width: 700px)');
+  const footerToggles = [...document.querySelectorAll('.footer-accordion-toggle')];
+  function updateFooterLayout() {
+    footerToggles.forEach(button => {
+      const links = document.getElementById(button.getAttribute('aria-controls'));
+      button.disabled = !mobileFooter.matches;
+      button.setAttribute('aria-expanded', String(!mobileFooter.matches));
+      links.hidden = mobileFooter.matches;
+    });
+  }
+  footerToggles.forEach(button => {
+    button.addEventListener('click', () => {
+      if (!mobileFooter.matches) return;
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      document.getElementById(button.getAttribute('aria-controls')).hidden = !open;
+    });
+  });
+  mobileFooter.addEventListener('change', updateFooterLayout);
+  updateFooterLayout();
+
   // Reveal a small group at a time, once. No observer or reduced motion means visible content.
   const revealSelectors = '.about-copy, .about-gallery, .product-range-heading, .capability-grid, .expo-copy, .expo-photos, .quality-copy, .quality-visual, .clients-heading, .blog-heading, .blog-card, .faq-intro, .faq-list, .closing-cta-copy';
   const revealElements = [...document.querySelectorAll(revealSelectors)];

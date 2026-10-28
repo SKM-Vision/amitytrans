@@ -43,6 +43,7 @@
   let startedAt = 0;
   let focusInside = false;
   let dialogOpen = false;
+  let menuOpen = false;
   let userPaused = false;
   const playbackButton = document.querySelector(".hero-playback");
   playbackButton.addEventListener("click", () => {
@@ -53,7 +54,7 @@
   });
 
   function isPaused() {
-    return userPaused || reducedMotion.matches || focusInside || dialogOpen || document.hidden;
+    return userPaused || reducedMotion.matches || focusInside || dialogOpen || menuOpen || document.hidden;
   }
 
   function syncPlayback() {
@@ -155,28 +156,70 @@
 
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.nav-links');
+  const menuBackdrop = document.querySelector('.mobile-menu-backdrop');
+  const mobileMenu = window.matchMedia('(max-width: 1000px)');
+  const menuBackground = [document.querySelector('main'), document.querySelector('.site-footer')];
+  let savedMenuScroll = 0;
+  let backgroundInert = [];
   function closeMenu(returnFocus = false) {
+    const wasOpen = menuOpen;
+    menuOpen = false;
     navigation.classList.remove('is-open');
+    navigation.inert = mobileMenu.matches;
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Open navigation');
+    menuBackdrop.hidden = true;
+    if (wasOpen) {
+      document.body.classList.remove('has-mobile-menu');
+      document.body.style.removeProperty('--menu-scroll-top');
+      menuBackground.forEach((element, index) => { element.inert = backgroundInert[index]; });
+      window.scrollTo({ top: savedMenuScroll, behavior: 'instant' });
+      syncPlayback();
+    }
     if (returnFocus) menuButton.focus();
   }
+  function openMenu() {
+    if (!mobileMenu.matches || menuOpen) return;
+    savedMenuScroll = window.scrollY;
+    backgroundInert = menuBackground.map(element => Boolean(element.inert));
+    menuOpen = true;
+    navigation.inert = false;
+    navigation.classList.add('is-open');
+    menuButton.setAttribute('aria-expanded', 'true');
+    menuButton.setAttribute('aria-label', 'Close navigation');
+    document.body.style.setProperty('--menu-scroll-top', `${-savedMenuScroll}px`);
+    document.body.classList.add('has-mobile-menu');
+    menuBackdrop.hidden = false;
+    menuBackground.forEach(element => { element.inert = true; });
+    syncPlayback();
+  }
+  navigation.inert = mobileMenu.matches;
   menuButton.addEventListener('click', () => {
-    const open = menuButton.getAttribute('aria-expanded') !== 'true';
-    navigation.classList.toggle('is-open', open);
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    if (menuOpen) closeMenu();
+    else openMenu();
   });
+  menuBackdrop.addEventListener('click', () => closeMenu(true));
   document.addEventListener('click', event => {
     if (!event.target.closest('.navbar')) closeMenu();
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') closeMenu(true);
+    if (!menuOpen) return;
+    if (event.key === 'Escape') { event.preventDefault(); closeMenu(true); }
+    if (event.key === 'Tab') {
+      const focusable = [...header.querySelectorAll('a[href], button:not([disabled])')].filter(element => {
+        const style = window.getComputedStyle(element);
+        return style.display !== 'none' && style.visibility !== 'hidden';
+      });
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
   });
   navigation.addEventListener('click', event => {
     if (event.target.closest('a')) closeMenu();
   });
-  window.matchMedia('(min-width: 1001px)').addEventListener('change', () => closeMenu());
+  mobileMenu.addEventListener('change', () => closeMenu());
 
   function openDialog(dialog) {
     closeMenu();

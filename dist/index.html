@@ -7,9 +7,11 @@
   <meta name="description" content="Discover ATIPL instrument transformers for metering and protection. Indoor and outdoor current transformers, voltage transformers and metering solutions.">
   <title>Amitytrans Techno | Precision. Protection. Performance.</title>
   <link rel="icon" href="assets/atipl-logo.jpg" type="image/jpeg">
-  <link rel="preload" as="image" href="assets/hero-generation.webp" imagesrcset="assets/hero-generation-mobile.webp 960w, assets/hero-generation.webp 1672w" imagesizes="100vw">
+  <link rel="preload" as="image" href="assets/hero-generation.webp" media="(min-width: 701px)">
+  <link rel="preload" as="image" href="assets/hero-generation-mobile-v2.webp" media="(max-width: 700px)">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="mobile.css">
   <script src="script.js" defer></script>
   <script src="experience.js" defer></script>
 </head>
@@ -22,6 +24,9 @@
     <symbol id="phone" viewBox="0 0 24 24"><path d="m8 3 3 5-3 3c1.2 2.4 2.6 3.8 5 5l3-3 5 3c0 3-2 5-5 5C9 21 3 15 3 8c0-3 2-5 5-5Z"/></symbol>
     <symbol id="download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
     <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="location" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="document" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7Zm0 0v5h4M9 12h6M9 16h6"/></symbol>
     <symbol id="calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 11h18M7 15h3M14 15h3M7 18h3"/></symbol>
     <symbol id="quality-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
     <symbol id="quality-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
@@ -49,6 +54,7 @@
       </div>
     </nav>
   </header>
+  <button class="mobile-menu-backdrop" type="button" aria-label="Close navigation" tabindex="-1" hidden></button>
 
   <main id="main">
     <section class="hero" aria-roledescription="carousel" aria-label="Amitytrans highlights" tabindex="0">
@@ -56,7 +62,7 @@
       <div class="slides">
         <article class="slide slide-generation is-active" id="slide-1" role="group" aria-roledescription="slide" aria-label="1 of 3: Power generation">
           <picture class="slide-art">
-            <source media="(max-width: 700px)" srcset="assets/hero-generation-mobile.webp">
+            <source media="(max-width: 700px)" srcset="assets/hero-generation-mobile-v2.webp">
             <img src="assets/hero-generation.webp" alt="Close-up of porcelain transformer bushings and metal substation equipment in warm sunset light" width="1672" height="941" fetchpriority="high">
           </picture>
           <div class="slide-shade"></div>
@@ -72,7 +78,7 @@
         </article>
         <article class="slide" id="slide-2" role="group" aria-roledescription="slide" aria-label="2 of 3: Power protection" aria-hidden="true" inert>
           <picture class="slide-art">
-            <source media="(max-width: 700px)" srcset="assets/hero-power-mobile.webp">
+            <source media="(max-width: 700px)" srcset="assets/hero-power-mobile-v2.webp">
             <img src="assets/hero-power.webp" alt="Transmission towers and a lit electrical substation overlooking a city at dusk" width="1672" height="941" decoding="async">
           </picture>
           <div class="slide-shade"></div>
@@ -88,7 +94,7 @@
         </article>
         <article class="slide slide-green" id="slide-3" role="group" aria-roledescription="slide" aria-label="3 of 3: Greener future" aria-hidden="true" inert>
           <picture class="slide-art">
-            <source media="(max-width: 700px)" srcset="assets/hero-green-mobile.webp">
+            <source media="(max-width: 700px)" srcset="assets/hero-green-mobile-v2.webp">
             <img src="assets/hero-green.webp" alt="A green seedling inside a clear glass lightbulb standing in soil" width="1672" height="941" decoding="async">
           </picture>
           <div class="slide-shade"></div>
@@ -511,8 +517,8 @@
           <a class="footer-catalogue" href="assets/atipl-catalogue.pdf" target="_blank" rel="noopener">Download catalogue<svg aria-hidden="true"><use href="#download"/></svg><span class="sr-only"> (PDF, opens in a new tab)</span></a>
         </div>
         <nav class="footer-nav" aria-labelledby="footer-links-title">
-          <h2 id="footer-links-title">Quick links</h2>
-          <ul>
+          <h2 id="footer-links-title"><button class="footer-accordion-toggle" type="button" aria-expanded="true" aria-controls="footer-quick-links">Quick links<span aria-hidden="true"></span></button></h2>
+          <ul id="footer-quick-links">
             <li><a href="#about">About us</a></li>
             <li><a href="#quality">Quality &amp; commitment</a></li>
             <li><a href="#clients">Our clients</a></li>
@@ -522,8 +528,8 @@
           </ul>
         </nav>
         <nav class="footer-nav" aria-labelledby="footer-products-title">
-          <h2 id="footer-products-title">Product range</h2>
-          <ul>
+          <h2 id="footer-products-title"><button class="footer-accordion-toggle" type="button" aria-expanded="true" aria-controls="footer-product-links">Product range<span aria-hidden="true"></span></button></h2>
+          <ul id="footer-product-links">
             <li><a href="#panel-ct">Current transformers</a></li>
             <li><a href="#panel-pt">Potential transformers</a></li>
             <li><a href="#panel-metering">Metering cubicles</a></li>
@@ -533,14 +539,15 @@
         </nav>
         <div class="footer-contact" aria-labelledby="footer-contact-title">
           <h2 id="footer-contact-title">Contact us</h2>
-          <div class="footer-contact-block">
+          <p class="footer-company-card"><span class="footer-contact-icon"><svg aria-hidden="true"><use href="#document"/></svg></span><span>Amitytrans Techno (I) Pvt. Ltd.</span></p>
+          <div class="footer-contact-block footer-contact-sales">
             <p class="footer-contact-label">Sales &amp; technical enquiries</p>
-            <a class="footer-email" href="mailto:info@amitytrans.com">info@amitytrans.com</a>
-            <a class="footer-phone" href="tel:+917447441371">+91 74474 41371<svg aria-hidden="true"><use href="#arrow"/></svg></a>
+            <a class="footer-email" href="mailto:info@amitytrans.com"><span class="footer-contact-icon"><svg aria-hidden="true"><use href="#mail"/></svg></span><span>info@amitytrans.com</span></a>
+            <a class="footer-phone" href="tel:+917447441371"><span class="footer-contact-icon"><svg aria-hidden="true"><use href="#phone"/></svg></span><span>+91 74474 41371</span></a>
           </div>
-          <div class="footer-contact-block">
+          <div class="footer-contact-block footer-contact-office">
             <p class="footer-contact-label">Office &amp; works</p>
-            <address>Gut No. 74, Plot No. 30, Karodi,<br>MIDC Waluj, Aurangabad,<br>Maharashtra 431136, India.</address>
+            <div class="footer-address-row"><span class="footer-contact-icon"><svg aria-hidden="true"><use href="#location"/></svg></span><address>Gut No. 74, Plot No. 30, Karodi,<br>MIDC Waluj, Aurangabad,<br>Maharashtra 431136, India.</address></div>
           </div>
         </div>
       </div>
@@ -551,7 +558,7 @@
           <span>Stay connected</span>
           <a class="footer-icon-link" href="mailto:info@amitytrans.com" aria-label="Email ATIPL"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
           <a class="footer-icon-link" href="tel:+917447441371" aria-label="Call ATIPL"><svg aria-hidden="true"><use href="#phone"/></svg></a>
-          <a class="footer-icon-link footer-back-top" href="#top" aria-label="Back to top"><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="footer-icon-link footer-back-top" href="#top" aria-label="Back to top"><span class="footer-back-label">Back to top</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
         </div>
       </div>
       <div class="footer-wordmark" aria-hidden="true">AMITYTRANS</div>

@@ -43,3 +43,11 @@ All site assets are in `dist/assets`. See `ASSET_SOURCES.md` for image provenanc
 - Certification and quality details use native disclosures. Product categories stay readable if JavaScript or IntersectionObserver is unavailable.
 - Existing two-paragraph About Us copy, entry-triggered counters and the reduced closing CTA spacing are retained.
 - Interaction QA: `node .sites-runtime/qa/verify-experience.cjs` (requires the ignored local jsdom QA install). This checks DOM behaviour; visual browser QA is a separate step.
+
+## Mobile responsiveness update
+
+- At widths up to 700px, the hero uses three new 960 ? 1440 portrait illustrations from `dist/assets/hero-*-mobile-v2.webp`. Original generated PNGs and exact built-in ImageGen prompts are retained in `source-images/mobile-hero/`.
+- The mobile hero is 70svh, with its former 730px/1100px limits scaled to 511px/770px, for a 30% reduction. Typography and controls are adjusted for the shorter section.
+- At the existing hamburger breakpoint (1000px), navigation slides down into the top 50svh. A blurred backdrop, fixed-body scroll lock, background inertness and keyboard focus containment keep interaction inside the open menu. Escape, backdrop, link activation and desktop resizing close the menu and restore the prior scroll position.
+- The closing CTA is hidden only up to 700px. The mobile footer follows the supplied reference: company introduction, contact card, address, email/phone rows, collapsible Quick links/Product range, centred copyright, back-to-top action and an italic wordmark. ATIPL contact details and branding are retained.
+- QA: `node .sites-runtime/qa/verify-experience.cjs` covers DOM interactions; `node .sites-runtime/qa/verify-mobile-css.cjs` checks stylesheet cascading at eight viewport widths. These checks do not substitute for mobile browser screenshot verification.
