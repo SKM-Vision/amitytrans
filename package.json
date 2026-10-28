@@ -4,7 +4,7 @@
   "private": true,
   "description": "Amitytrans Techno instrument transformer website",
   "engines": {
-    "node": ">=24"
+    "node": "24.x"
   },
   "scripts": {
     "build": "node scripts/build.cjs",

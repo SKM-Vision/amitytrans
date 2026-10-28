@@ -12,9 +12,13 @@ python -m http.server 4173 --directory dist
 
 Open http://localhost:4173. A static host should publish `dist/`. Existing Sites configuration is retained in `.openai/hosting.json`.
 
+## Vercel deployment
+
+Import the repository with its root directory left at the repository root. `vercel.json` selects the Other framework preset, runs `npm run build`, and publishes `dist/`. Node.js is pinned to 24.x. A push to the connected production branch starts a new deployment.
+
 ## Edit and verify
 
-Use Node.js 24 or later:
+Use Node.js 24.x:
 
 ```powershell
 npm ci
